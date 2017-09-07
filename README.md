@@ -1,2 +1,2 @@
-# react-photonkit
+# react-photon
 > Photon components built with React.
