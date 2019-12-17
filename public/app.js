@@ -1,40 +1,26 @@
 import React from 'react';
+import Window from '../packages/window/main';
+import WindowContent from '../packages/window-content/main';
+import ToolbarHeader from '../packages/toolbar-header/main';
+import ToolbarFooter from '../packages/toolbar-footer/main';
+import Button from '../packages/button/main';
 
 export default class extends React.Component {
   render() {
     return (
-      <div>
-        <header className="toolbar toolbar-header">
-          <h1 className="title">Header</h1>
-          <div className="toolbar-actions">
-            <div className="btn-group">
-              <button className="btn btn-default">
-                <span className="icon icon-home"></span>
-              </button>
-              <button className="btn btn-default">
-                <span className="icon icon-folder"></span>
-              </button>
-              <button className="btn btn-default active">
-                <span className="icon icon-cloud"></span>
-              </button>
-              <button className="btn btn-default">
-                <span className="icon icon-popup"></span>
-              </button>
-              <button className="btn btn-default">
-                <span className="icon icon-shuffle"></span>
-              </button>
-            </div>
+      <Window>
+        <ToolbarHeader title="header" />
+        <WindowContent style={{ flexDirection: 'column' }}>
+          <div className="is-body" style={{ padding: 10 }}>
+            <Button>Default</Button>
+            <Button theme="primary">Primary</Button>
+            <Button theme="positive">Positive</Button>
+            <Button theme="negative">Negative</Button>
+            <Button theme="warning">Warning</Button>
           </div>
-        </header>
-
-        <footer className="toolbar toolbar-footer">
-          <h1 className="title">Footer</h1>
-          <div className="toolbar-actions">
-            <button className="btn btn-default">Cancel</button>
-            <button className="btn btn-primary pull-right">Save</button>
-          </div>
-        </footer>
-      </div>
+        </WindowContent>
+        <ToolbarFooter title="footer" />
+      </Window>
     );
   }
 }

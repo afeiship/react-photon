@@ -6,10 +6,11 @@ const CLASS_NAME = 'toolbar-footer';
 export default class extends React.Component {
   static displayName = CLASS_NAME;
   render() {
-    const { className, title, ...props } = this.props;
+    const { className, title, children, ...props } = this.props;
     return (
       <footer className={classNames('toolbar', CLASS_NAME, classNames)} {...props}>
-        <h1 class="title">{title}</h1>
+        <h1 className="title">{title}</h1>
+        { children }
       </footer>
     );
   }
