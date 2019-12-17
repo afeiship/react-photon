@@ -1,11 +1,15 @@
+const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (inEnv) => {
   return {
     mode: 'production',
-    entry: './src/index.js',
+    entry: {
+      alert: './packages/alert/main',
+      button: './packages/button/main'
+    },
     output: {
-      filename: 'react-photon.js'
+      path: path.resolve(__dirname, 'dist/lib')
     },
     module: {
       rules: [
@@ -20,7 +24,6 @@ module.exports = (inEnv) => {
     },
     externals: {
       react: 'react'
-    },
-    plugins: [new CleanWebpackPlugin()]
+    }
   };
 };
