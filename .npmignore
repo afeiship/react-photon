@@ -1,0 +1,12 @@
+.idea
+.DS_Store
+**/npm-debug.log
+**/node_modules
+test
+src
+build
+gulpfile.js
+
+docs
+assets
+webpack.config.js

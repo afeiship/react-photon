@@ -1,6 +1,6 @@
-# react-photon
+# @feizheng/react-photon
 > Photon components built with React.
 
 
-## resources:
-+ http://photonkit.com/
+## resources
+- http://photonkit.com/

@@ -1,0 +1,15 @@
+{
+  "name": "@feizheng/react-photon",
+  "version": "1.0.0",
+  "description": "Photon components built with React.",
+  "homepage": "https://github.com/afeiship",
+  "author": {
+    "name": "afeiship",
+    "email": "1290657123@qq.com"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
