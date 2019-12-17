@@ -29,10 +29,9 @@ export default class extends React.Component {
 
         <footer className="toolbar toolbar-footer">
           <h1 className="title">Footer</h1>
-          <div class="toolbar-actions">
-            <button class="btn btn-default">Cancel</button>
-
-            <button class="btn btn-primary pull-right">Save</button>
+          <div className="toolbar-actions">
+            <button className="btn btn-default">Cancel</button>
+            <button className="btn btn-primary pull-right">Save</button>
           </div>
         </footer>
       </div>
