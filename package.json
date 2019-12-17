@@ -13,6 +13,7 @@
     "react-dom": "^16.12.0"
   },
   "scripts": {
+    "local": "webpack-dev-server --config webpack.local.config",
     "build": "webpack -p",
     "build:components": "webpack -p --config webpack.components.config"
   },
@@ -22,6 +23,10 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.3.2",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.1",
+    "url-loader": "^3.0.0",
     "webpack": "^4.41.3",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
