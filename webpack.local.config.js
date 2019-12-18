@@ -32,6 +32,10 @@ module.exports = (inEnv) => {
       new HtmlWebpackPlugin({
         template: './public/index.ejs'
       })
-    ]
+    ],
+    devServer: {
+      stats: 'errors-only',
+      open: true
+    }
   };
 };

@@ -4,6 +4,7 @@ import WindowContent from '../packages/window-content/main';
 import ToolbarHeader from '../packages/toolbar-header/main';
 import ToolbarFooter from '../packages/toolbar-footer/main';
 import Button from '../packages/button/main';
+import ButtonGroup from '../packages/button-group/main';
 
 export default class extends React.Component {
   render() {
@@ -32,6 +33,14 @@ export default class extends React.Component {
             <Button size="mini" theme="warning">
               Warning
             </Button>
+          </div>
+          <div className="is-body" style={{ padding: 10 }}>
+            <ButtonGroup>
+              <Button size="mini">Default</Button>
+              <Button size="mini" theme="primary">
+                Primary
+              </Button>
+            </ButtonGroup>
           </div>
         </WindowContent>
         <ToolbarFooter title="footer" />
