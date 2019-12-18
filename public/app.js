@@ -10,8 +10,9 @@ import Input from '../packages/input/main';
 import Textarea from '../packages/textarea/main';
 import Select from '../packages/select/main';
 import Checkbox from '../packages/checkbox/main';
-import Radio from '../packages/radio/main';
+import Table from '../packages/table/main';
 import RadioGroup from '../packages/radio-group/main';
+import Pane from '../packages/pane/main';
 
 export default class extends React.Component {
   state = {
@@ -103,6 +104,9 @@ export default class extends React.Component {
                 onChange={this.onChange}
               />
             </form>
+            <Pane>
+              <Table />
+            </Pane>
           </div>
 
           <iframe
