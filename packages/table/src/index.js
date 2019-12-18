@@ -7,11 +7,15 @@ const CLASS_NAME = 'table';
 const DEFAULT_TEMPLATE_COLUMN = ({ item }) => {
   return <th key={item.key}>{item.label}</th>;
 };
+const DEFAULT_TEMPLATE = ({ item, column }) => {
+  return <td key={column.key}>{item[column.dataIndex]}</td>;
+};
 
 export default class extends React.Component {
   static displayName = CLASS_NAME;
   static propsTypes = {
     striped: PropTypes.bool,
+    rowKey: PropTypes.string,
     columns: PropTypes.array,
     items: PropTypes.array,
     templateColumn: PropTypes.func,
@@ -19,10 +23,11 @@ export default class extends React.Component {
   };
 
   static defaultProps = {
+    rowKey: 'id',
     columns: [],
     items: [],
     templateColumn: DEFAULT_TEMPLATE_COLUMN,
-    template: noop
+    template: DEFAULT_TEMPLATE
   };
 
   get columnView() {
@@ -33,9 +38,17 @@ export default class extends React.Component {
   }
 
   get childView() {
-    const { items, template } = this.props;
+    const { rowKey, items, columns, template } = this.props;
     return items.map((item, index) => {
-      return template({ item, index });
+      console.log(item[rowKey]);
+
+      return (
+        <tr key={item[rowKey]}>
+          {columns.map((column) => {
+            return template({ item, column, index });
+          })}
+        </tr>
+      );
     });
   }
 
@@ -43,6 +56,7 @@ export default class extends React.Component {
     const {
       className,
       striped,
+      rowKey,
       items,
       columns,
       template,

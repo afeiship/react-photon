@@ -23,10 +23,10 @@ export default class extends React.Component {
     ],
     table: {
       columns: [
-        { key: 'Name', label: 'Name' },
-        { key: 'kind', label: 'Kind' },
-        { key: 'date', label: 'Date Modified' },
-        { key: 'author', label: 'Author' }
+        { key: 'name', label: 'Name', dataIndex: 'name' },
+        { key: 'kind', label: 'Kind', dataIndex: 'kind' },
+        { key: 'date', label: 'Date Modified', dataIndex: 'date' },
+        { key: 'author', label: 'Author', dataIndex: 'author' }
       ],
       items: [
         {
@@ -41,14 +41,14 @@ export default class extends React.Component {
           name: 'buttons.scss',
           kind: 'Document',
           date: 'Oct 13, 2015',
-          author: 'connors'
+          author: 'afei'
         },
         {
           id: 'lists.scss',
           name: 'lists.scss',
           kind: 'Document',
           date: 'Oct 13, 2015',
-          author: 'connors'
+          author: 'afeiship'
         }
       ]
     }
@@ -136,9 +136,7 @@ export default class extends React.Component {
               />
             </form>
             <Pane>
-              <Table columns={table.columns} items={table.items} templte={({ item })=>{
-                return <td key={item.id}>{item.name}</td>;
-              }}/>
+              <Table striped columns={table.columns} items={table.items} />
             </Pane>
           </div>
 
