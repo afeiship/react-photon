@@ -37,8 +37,9 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "classnames": "^2.2.6"
+    "@feizheng/noop": "^1.0.0",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

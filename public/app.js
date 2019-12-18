@@ -8,9 +8,22 @@ import ButtonGroup from '../packages/button-group/main';
 import FormGroup from '../packages/form-group/main';
 import Input from '../packages/input/main';
 import Textarea from '../packages/textarea/main';
+import Select from '../packages/select/main';
 
 export default class extends React.Component {
+  state = {
+    options: [
+      { value: 'v1', label: 'Option one' },
+      { value: 'v2', label: 'Option two' },
+      { value: 'v3', label: 'Option three' }
+    ]
+  };
+  onChange = (inEvent) => {
+    const { name, value } = inEvent.target;
+    console.log('[log]:', name, value);
+  };
   render() {
+    const { options } = this.state;
     return (
       <Window>
         <ToolbarHeader title="header" />
@@ -50,16 +63,31 @@ export default class extends React.Component {
             <form>
               <FormGroup>
                 <label>Email address</label>
-                <Input type="email" placeholder="Email" />
+                <Input
+                  name="email"
+                  onChange={this.onChange}
+                  type="email"
+                  placeholder="Email"
+                />
               </FormGroup>
               <FormGroup>
                 <label>Password</label>
-                <Input type="password" placeholder="Password" />
+                <Input
+                  name="password"
+                  onChange={this.onChange}
+                  type="password"
+                  placeholder="Password"
+                />
               </FormGroup>
               <FormGroup>
                 <label>Description</label>
-                <Textarea placeholder="description" />
+                <Textarea
+                  name="description"
+                  onChange={this.onChange}
+                  placeholder="description"
+                />
               </FormGroup>
+              <Select items={options} />
             </form>
           </div>
 

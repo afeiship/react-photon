@@ -1,14 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const CLASS_NAME = 'form-input';
+const CLASS_NAME = 'form-textarea';
 
 export default class extends React.Component {
   static displayName = CLASS_NAME;
   render() {
     const { className, ...props } = this.props;
     return (
-      <input
+      <textarea
         className={classNames(CLASS_NAME, 'form-control', classNames)}
         {...props}
       />
