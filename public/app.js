@@ -10,6 +10,8 @@ import Input from '../packages/input/main';
 import Textarea from '../packages/textarea/main';
 import Select from '../packages/select/main';
 import Checkbox from '../packages/checkbox/main';
+import Radio from '../packages/radio/main';
+import RadioGroup from '../packages/radio-group/main';
 
 export default class extends React.Component {
   state = {
@@ -93,6 +95,12 @@ export default class extends React.Component {
                 name="checkbox"
                 onChange={this.onChange}
                 label=" This is a checkbox"
+              />
+
+              <RadioGroup
+                items={options}
+                name="radios"
+                onChange={this.onChange}
               />
             </form>
           </div>

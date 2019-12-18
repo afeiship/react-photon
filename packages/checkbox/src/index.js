@@ -33,7 +33,6 @@ export default class extends React.Component {
       ...props
     } = this.props;
 
-    console.log('props', props);
     return (
       <div className={classNames(CLASS_NAME, 'checkbox', classNames)}>
         <label>
