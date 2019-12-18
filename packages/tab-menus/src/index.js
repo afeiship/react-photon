@@ -6,9 +6,16 @@ import TabGroup from '../../tab-group/main';
 import TabItem from '../../tab-item/main';
 const CLASS_NAME = 'pane';
 
-const DEFAULT_TEMPLATE = ({ item }) => {
-  const isActive = value === item.value;
-  return <TabItem active={isActive}>{item.label}</TabItem>;
+const DEFAULT_TEMPLATE = ({ item, active }, cb) => {
+  return (
+    <TabItem
+      key={item.value}
+      data-value={item.value}
+      active={active(item)}
+      onClick={cb}>
+      {item.label}
+    </TabItem>
+  );
 };
 
 export default class extends React.Component {
@@ -16,7 +23,8 @@ export default class extends React.Component {
   static propTypes = {
     items: PropTypes.array,
     template: PropTypes.func,
-    value: PropTypes.any,
+    name: PropTypes.string,
+    value: PropTypes.string,
     onChange: PropTypes.func
   };
 
@@ -26,10 +34,43 @@ export default class extends React.Component {
     onChange: noop
   };
 
-  get childView() {}
+  constructor(inProps) {
+    super(inProps);
+    this.state = {
+      value: inProps.value
+    };
+  }
+
+  get childView() {
+    const { items, template, onChange } = this.props;
+    const { value } = this.state;
+    const active = (item) => {
+      return value === item.value;
+    };
+
+    const cb = (inEvent) => {
+      const { dataset, name } = inEvent.target;
+      this.setState({ value: dataset.value }, () => {
+        const target = { value: dataset.value, dataset, name };
+        onChange({ target });
+      });
+    };
+
+    return items.map((item, index) => {
+      return template({ item, active, index }, cb);
+    });
+  }
 
   render() {
-    const { className, items, template, value, ...props } = this.props;
-    return <TabGroup>{items.map((item) => {})}</TabGroup>;
+    const {
+      className,
+      items,
+      template,
+      value,
+      onChange,
+      ...props
+    } = this.props;
+
+    return <TabGroup children={this.childView} {...props} />;
   }
 }

@@ -140,7 +140,12 @@ export default class extends React.Component {
               <Table striped columns={table.columns} items={table.items} />
             </Pane>
 
-            <TabMenus items={options} value="v1" />
+            <TabMenus
+              items={options}
+              value="v1"
+              name="tab-menus"
+              onChange={this.onChange}
+            />
           </div>
 
           <iframe

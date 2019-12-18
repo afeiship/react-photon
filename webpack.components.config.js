@@ -23,7 +23,8 @@ module.exports = (inEnv) => {
       ]
     },
     externals: {
-      react: 'react'
+      react: 'react',
+      classNames: 'classnames'
     }
   };
 };
