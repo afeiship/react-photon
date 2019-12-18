@@ -10,6 +10,7 @@ export default class extends React.Component {
     return (
       <input
         className={classNames(CLASS_NAME, 'form-control', classNames)}
+        autoComplete="off"
         {...props}
       />
     );

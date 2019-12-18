@@ -20,14 +20,45 @@ export default class extends React.Component {
       { value: 'v1', label: 'Option one' },
       { value: 'v2', label: 'Option two' },
       { value: 'v3', label: 'Option three' }
-    ]
+    ],
+    table: {
+      columns: [
+        { key: 'Name', label: 'Name' },
+        { key: 'kind', label: 'Kind' },
+        { key: 'date', label: 'Date Modified' },
+        { key: 'author', label: 'Author' }
+      ],
+      items: [
+        {
+          id: 'bars.scss',
+          name: 'bars.scss',
+          kind: 'Document',
+          date: 'Oct 13, 2015',
+          author: 'connors'
+        },
+        {
+          id: 'buttons.scss',
+          name: 'buttons.scss',
+          kind: 'Document',
+          date: 'Oct 13, 2015',
+          author: 'connors'
+        },
+        {
+          id: 'lists.scss',
+          name: 'lists.scss',
+          kind: 'Document',
+          date: 'Oct 13, 2015',
+          author: 'connors'
+        }
+      ]
+    }
   };
   onChange = (inEvent) => {
     const { name, value } = inEvent.target;
     console.log('[log]:', name, value);
   };
   render() {
-    const { options } = this.state;
+    const { options, table } = this.state;
     return (
       <Window>
         <ToolbarHeader title="header" />
@@ -105,7 +136,9 @@ export default class extends React.Component {
               />
             </form>
             <Pane>
-              <Table />
+              <Table columns={table.columns} items={table.items} templte={({ item })=>{
+                return <td key={item.id}>{item.name}</td>;
+              }}/>
             </Pane>
           </div>
 
