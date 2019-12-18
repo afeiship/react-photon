@@ -18,6 +18,21 @@ export default class extends React.Component {
             <Button theme="negative">Negative</Button>
             <Button theme="warning">Warning</Button>
           </div>
+          <div className="is-body" style={{ padding: 10 }}>
+            <Button size="mini">Default</Button>
+            <Button size="mini" theme="primary">
+              Primary
+            </Button>
+            <Button size="mini" theme="positive">
+              Positive
+            </Button>
+            <Button size="mini" theme="negative">
+              Negative
+            </Button>
+            <Button size="mini" theme="warning">
+              Warning
+            </Button>
+          </div>
         </WindowContent>
         <ToolbarFooter title="footer" />
       </Window>

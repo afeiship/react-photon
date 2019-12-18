@@ -1,8 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const CLASS_NAME = 'btn';
 export default class extends React.Component {
+  static propsTypes = {
+    theme: PropTypes.oneOf(['default', 'primary', 'positive', 'negative', 'warning']),
+    size: PropTypes.oneOf(['mini', 'large'])
+  };
   static defaultProps = {
     theme: 'default',
     size: 'large'
@@ -13,15 +18,8 @@ export default class extends React.Component {
       <button
         className={classNames(
           CLASS_NAME,
-          {
-            'btn-mini': size === 'mini',
-            'btn-large': size === 'large',
-            'btn-default': theme === 'default',
-            'btn-primary': theme === 'primary',
-            'btn-positive': theme === 'positive',
-            'btn-negative': theme === 'negative',
-            'btn-warning': theme === 'warning'
-          },
+          size ? `btn-${size}` : '',
+          theme ? `btn-${theme}` : '',
           className
         )}
         {...props}
