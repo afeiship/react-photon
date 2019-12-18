@@ -32,7 +32,7 @@ export default class extends React.Component {
   }
 
   render() {
-    const { className, items, onChange, ...props } = this.props;
+    const { className, items, template, onChange, ...props } = this.props;
     return (
       <select
         className={classNames(CLASS_NAME, 'form-control', classNames)}

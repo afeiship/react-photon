@@ -9,6 +9,7 @@ import FormGroup from '../packages/form-group/main';
 import Input from '../packages/input/main';
 import Textarea from '../packages/textarea/main';
 import Select from '../packages/select/main';
+import Checkbox from '../packages/checkbox/main';
 
 export default class extends React.Component {
   state = {
@@ -88,6 +89,11 @@ export default class extends React.Component {
                 />
               </FormGroup>
               <Select items={options} />
+              <Checkbox
+                name="checkbox"
+                onChange={this.onChange}
+                label=" This is a checkbox"
+              />
             </form>
           </div>
 
