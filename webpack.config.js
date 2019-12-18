@@ -19,6 +19,7 @@ module.exports = (inEnv) => {
       ]
     },
     externals: {
+      classnames: 'classnames',
       react: 'react'
     },
     plugins: [new CleanWebpackPlugin()]
