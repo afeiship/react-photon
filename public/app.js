@@ -13,6 +13,7 @@ import Checkbox from '../packages/checkbox/main';
 import Table from '../packages/table/main';
 import RadioGroup from '../packages/radio-group/main';
 import Pane from '../packages/pane/main';
+import TabMenus from '../packages/tab-menus/main';
 
 export default class extends React.Component {
   state = {
@@ -138,6 +139,8 @@ export default class extends React.Component {
             <Pane>
               <Table striped columns={table.columns} items={table.items} />
             </Pane>
+
+            <TabMenus items={options} value="v1" />
           </div>
 
           <iframe
