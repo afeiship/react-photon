@@ -5,6 +5,9 @@ import ToolbarHeader from '../packages/toolbar-header/main';
 import ToolbarFooter from '../packages/toolbar-footer/main';
 import Button from '../packages/button/main';
 import ButtonGroup from '../packages/button-group/main';
+import FormGroup from '../packages/form-group/main';
+import Input from '../packages/input/main';
+import Textarea from '../packages/textarea/main';
 
 export default class extends React.Component {
   render() {
@@ -42,6 +45,28 @@ export default class extends React.Component {
               </Button>
             </ButtonGroup>
           </div>
+
+          <div className="is-body" style={{ padding: 10 }}>
+            <form>
+              <FormGroup>
+                <label>Email address</label>
+                <Input type="email" placeholder="Email" />
+              </FormGroup>
+              <FormGroup>
+                <label>Password</label>
+                <Input type="password" placeholder="Password" />
+              </FormGroup>
+              <FormGroup>
+                <label>Description</label>
+                <Textarea placeholder="description" />
+              </FormGroup>
+            </form>
+          </div>
+
+          <iframe
+            hidden
+            className="component-example"
+            src="http://photonkit.com/components/icons.html"></iframe>
         </WindowContent>
         <ToolbarFooter title="footer" />
       </Window>
