@@ -12,7 +12,7 @@ npm i -S @feizheng/react-photon
    ```shell
    npm i -D babel-plugin-import
    ```
-2. .babelrc
+2. `.babelrc`
 
   ```js
   {
