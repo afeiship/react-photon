@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import ReactList from '@feizheng/react-list';
-import Icon from '../../icon/main';
 
 const CLASS_NAME = 'list-group';
 const DEFAULT_TEMPLATE = ({ item, index }) => {
