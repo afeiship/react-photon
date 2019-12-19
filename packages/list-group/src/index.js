@@ -6,8 +6,29 @@ import Icon from '../../icon/main';
 
 const CLASS_NAME = 'list-group';
 const DEFAULT_TEMPLATE = ({ item, index }) => {
-  const { type, ...props } = item;
-  return <li key={index} className={`list-group-${type}`} {...props} />;
+  const { type, icon, title, description, active, ...props } = item;
+  switch (type) {
+    case 'header':
+      return <li key={index} className="list-group-header" {...props} />;
+    default:
+      return (
+        <li
+          key={index}
+          className={classNames('list-group-item', { active })}
+          {...props}>
+          <img
+            className="img-circle media-object pull-left"
+            src={icon}
+            width="32"
+            height="32"
+          />
+          <div className="media-body">
+            <strong>{title}</strong>
+            <p>{description}</p>
+          </div>
+        </li>
+      );
+  }
 };
 
 export default class extends React.Component {

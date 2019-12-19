@@ -40,7 +40,7 @@ export default class extends React.Component {
         type: 'header',
         children: (
           <input
-            class="form-control"
+            className="form-control"
             type="text"
             placeholder="Search for someone"
           />
@@ -48,18 +48,22 @@ export default class extends React.Component {
       },
       {
         type: 'item',
-        children: [
-          <img
-            className="img-circle media-object pull-left"
-            src="http://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg"
-            width="32"
-            height="32"
-          />,
-          <div className="media-body">
-            <strong>List item title</strong>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        ]
+        icon: 'http://avatar.chsword.net/avatar/1',
+        title: 'List item title',
+        description: 'Lorem ipsum dolor sit amet.'
+      },
+      {
+        type: 'item',
+        active: true,
+        icon: 'http://avatar.chsword.net/avatar/2',
+        title: 'List item title',
+        description: 'Lorem ipsum dolor sit amet.'
+      },
+      {
+        type: 'item',
+        icon: 'http://avatar.chsword.net/avatar/3',
+        title: 'List item title',
+        description: 'Lorem ipsum dolor sit amet.'
       }
     ],
     table: {
@@ -193,7 +197,9 @@ export default class extends React.Component {
               </TabItem>
             </Tabs>
 
+            <ReactBlank value={20} />
             <NavGroup items={navs} />
+            <ReactBlank value={20} />
             <ListGroup items={lists} />
           </div>
 
