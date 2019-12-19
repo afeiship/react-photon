@@ -17,6 +17,7 @@ import PaneGroup from '../packages/pane-group/main';
 import Tabs from '../packages/tabs/main';
 import TabItem from '../packages/tab-item/main';
 import NavGroup from '../packages/nav-group/main';
+import ListGroup from '../packages/list-group/main';
 
 import ReactBlank from '@feizheng/react-blank';
 
@@ -27,12 +28,39 @@ export default class extends React.Component {
       { value: 'v2', label: 'Option two' },
       { value: 'v3', label: 'Option three' }
     ],
-    navs:[
-      { type: 'title', label: 'Favorites'},
-      { icon:'home', label: 'connors'},
-      { icon:'download', label: 'Download'},
-      { icon:'folder', label: 'Documents'},
-      { icon:'signal', label: 'AirPlay'},
+    navs: [
+      { type: 'title', label: 'Favorites' },
+      { icon: 'home', label: 'connors' },
+      { icon: 'download', label: 'Download' },
+      { icon: 'folder', label: 'Documents' },
+      { icon: 'signal', label: 'AirPlay' }
+    ],
+    lists: [
+      {
+        type: 'header',
+        children: (
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Search for someone"
+          />
+        )
+      },
+      {
+        type: 'item',
+        children: [
+          <img
+            className="img-circle media-object pull-left"
+            src="http://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg"
+            width="32"
+            height="32"
+          />,
+          <div className="media-body">
+            <strong>List item title</strong>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        ]
+      }
     ],
     table: {
       columns: [
@@ -71,7 +99,7 @@ export default class extends React.Component {
     console.log('[log]:', name, value);
   };
   render() {
-    const { options, table, navs } = this.state;
+    const { options, table, navs, lists } = this.state;
     return (
       <Window>
         <ToolbarHeader title="header" />
@@ -165,8 +193,8 @@ export default class extends React.Component {
               </TabItem>
             </Tabs>
 
-          <NavGroup items={navs} />
-
+            <NavGroup items={navs} />
+            <ListGroup items={lists} />
           </div>
 
           <iframe
