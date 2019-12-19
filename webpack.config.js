@@ -5,7 +5,9 @@ module.exports = (inEnv) => {
     mode: 'production',
     entry: './src/index.js',
     output: {
-      filename: 'react-photon.js'
+      filename: 'react-photon.js',
+      library: 'ReactPhoton',
+      libraryTarget: 'umd'
     },
     module: {
       rules: [
@@ -20,7 +22,12 @@ module.exports = (inEnv) => {
     },
     externals: {
       classnames: 'classnames',
-      react: 'react'
+      react: 'react',
+      'react-dom': 'react-dom',
+      '@feizheng/noop': '@feizheng/noop',
+      'object-assign': 'object-assign',
+      'prop-types': 'prop-types',
+      '@feizheng/react-list': '@feizheng/react-list'
     },
     plugins: [new CleanWebpackPlugin()]
   };

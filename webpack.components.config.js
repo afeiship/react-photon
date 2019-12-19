@@ -27,7 +27,10 @@ module.exports = (inEnv) => {
       'window-content': './packages/window-content/main'
     },
     output: {
-      path: path.resolve(__dirname, 'dist/lib')
+      path: path.resolve(__dirname, 'dist/lib'),
+      filename: '[name].js',
+      library: '[name]',
+      libraryTarget: 'umd'
     },
     module: {
       rules: [
@@ -41,10 +44,13 @@ module.exports = (inEnv) => {
       ]
     },
     externals: {
-      react: 'react',
       classnames: 'classnames',
-      '@feizheng/noop': 'noop',
-      '@feizheng/react-list': 'ReactList'
+      react: 'react',
+      'react-dom': 'react-dom',
+      '@feizheng/noop': '@feizheng/noop',
+      'object-assign': 'object-assign',
+      'prop-types': 'prop-types',
+      '@feizheng/react-list': '@feizheng/react-list'
     }
   };
 };

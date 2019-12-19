@@ -1,25 +1,28 @@
 import React from 'react';
-import Window from '../packages/window/main';
-import WindowContent from '../packages/window-content/main';
-import ToolbarHeader from '../packages/toolbar-header/main';
-import ToolbarFooter from '../packages/toolbar-footer/main';
-import Button from '../packages/button/main';
-import ButtonGroup from '../packages/button-group/main';
-import FormGroup from '../packages/form-group/main';
-import Input from '../packages/input/main';
-import Textarea from '../packages/textarea/main';
-import Select from '../packages/select/main';
-import Checkbox from '../packages/checkbox/main';
-import Table from '../packages/table/main';
-import RadioGroup from '../packages/radio-group/main';
-import Pane from '../packages/pane/main';
-import PaneGroup from '../packages/pane-group/main';
-import Tabs from '../packages/tabs/main';
-import TabItem from '../packages/tab-item/main';
-import NavGroup from '../packages/nav-group/main';
-import ListGroup from '../packages/list-group/main';
-
 import ReactBlank from '@feizheng/react-blank';
+import {
+  Button,
+  ButtonGroup,
+  Checkbox,
+  FormGroup,
+  Icon,
+  Input,
+  ListGroup,
+  NavGroup,
+  Pane,
+  PaneGroup,
+  RadioGroup,
+  Select,
+  TabItem,
+  Table,
+  Tabs,
+  Textarea,
+  ToolbarActions,
+  ToolbarFooter,
+  ToolbarHeader,
+  Window,
+  WindowContent
+} from '../dist/react-photon';
 import './assets/style.css';
 
 export default class extends React.Component {
@@ -204,11 +207,6 @@ export default class extends React.Component {
               <ReactBlank value={20} />
               <ListGroup items={lists} />
             </div>
-
-            <iframe
-              hidden
-              className="component-example"
-              src="http://photonkit.com/components/icons.html"></iframe>
           </WindowContent>
           <ToolbarFooter title="footer" />
         </Window>
