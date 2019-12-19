@@ -7,6 +7,7 @@
     "name": "afeiship",
     "email": "1290657123@qq.com"
   },
+  "main": "dist/react-photon.js",
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.12.0",
