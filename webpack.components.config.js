@@ -28,7 +28,7 @@ module.exports = (inEnv) => {
     },
     output: {
       path: path.resolve(__dirname, 'dist/lib'),
-      filename: '[name].js',
+      filename: '[name]/index.js',
       library: '[name]',
       libraryTarget: 'umd'
     },
