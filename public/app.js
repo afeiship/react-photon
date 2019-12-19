@@ -13,8 +13,12 @@ import Checkbox from '../packages/checkbox/main';
 import Table from '../packages/table/main';
 import RadioGroup from '../packages/radio-group/main';
 import Pane from '../packages/pane/main';
+import PaneGroup from '../packages/pane-group/main';
 import Tabs from '../packages/tabs/main';
 import TabItem from '../packages/tab-item/main';
+import NavGroup from '../packages/nav-group/main';
+
+import ReactBlank from '@feizheng/react-blank';
 
 export default class extends React.Component {
   state = {
@@ -22,6 +26,13 @@ export default class extends React.Component {
       { value: 'v1', label: 'Option one' },
       { value: 'v2', label: 'Option two' },
       { value: 'v3', label: 'Option three' }
+    ],
+    navs:[
+      { type: 'title', label: 'Favorites'},
+      { icon:'home', label: 'connors'},
+      { icon:'download', label: 'Download'},
+      { icon:'folder', label: 'Documents'},
+      { icon:'signal', label: 'AirPlay'},
     ],
     table: {
       columns: [
@@ -60,7 +71,7 @@ export default class extends React.Component {
     console.log('[log]:', name, value);
   };
   render() {
-    const { options, table } = this.state;
+    const { options, table, navs } = this.state;
     return (
       <Window>
         <ToolbarHeader title="header" />
@@ -137,9 +148,10 @@ export default class extends React.Component {
                 onChange={this.onChange}
               />
             </form>
-            <Pane>
-              <Table striped columns={table.columns} items={table.items} />
-            </Pane>
+
+            <ReactBlank value={20} />
+            <Table striped columns={table.columns} items={table.items} />
+            <ReactBlank value={20} />
 
             <Tabs value="0" onChange={this.onChange} name="tabs">
               <TabItem title="a1">
@@ -152,6 +164,9 @@ export default class extends React.Component {
                 <div className="is-bd">Body3</div>
               </TabItem>
             </Tabs>
+
+          <NavGroup items={navs} />
+
           </div>
 
           <iframe

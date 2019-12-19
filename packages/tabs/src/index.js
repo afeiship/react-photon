@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import TabItem from '../../tab-item/main';
 
 const CLASS_NAME = 'tabs';
 
