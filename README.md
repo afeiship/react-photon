@@ -14,7 +14,7 @@ npm i -S @feizheng/react-photon
    ```
 2. .babelrc
 
-  ```json
+  ```js
   {
     "presets": ["@babel/preset-env", "@babel/react"],
     "plugins": [
