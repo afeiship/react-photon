@@ -1,0 +1,13 @@
+#app{
+  height:100%;
+}
+.example-component-window {
+  height: 80%;
+  width: 80%;
+  margin: 5% auto;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bebebe;
+  border-radius: 6px;
+  position: relative;
+}
