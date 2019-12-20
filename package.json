@@ -2,11 +2,18 @@
   "name": "@feizheng/react-photon",
   "version": "1.0.2",
   "description": "Photon components built with React.",
-  "homepage": "https://github.com/afeiship",
+  "homepage": "https://github.com/afeiship/react-photon",
   "author": {
     "name": "afeiship",
     "email": "1290657123@qq.com"
   },
+  "keywords": [
+    "react",
+    "photon",
+    "photonkit",
+    "macos",
+    "ios"
+  ],
   "main": "dist/react-photon.js",
   "license": "MIT",
   "peerDependencies": {
