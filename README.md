@@ -1,6 +1,9 @@
 # react-photon
 > Photon components built with React.
 
+## preview
+- https://afeiship.github.io/react-photon/
+
 ## installation
 ```shell
 npm i -S @feizheng/react-photon
