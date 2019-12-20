@@ -48,7 +48,7 @@ export default class extends React.Component {
     return (
       <ReactList
         nodeName="ul"
-        className={classNames(CLASS_NAME, classNames)}
+        className={classNames(CLASS_NAME, className)}
         {...props}
       />
     );

@@ -26,7 +26,7 @@ export default class extends React.Component {
         className={classNames(
           CLASS_NAME,
           { active: active, 'tab-item-fixed': fixed },
-          classNames
+          className
         )}
         {...props}>
         {closeable && <span class="icon icon-cancel icon-close-tab" />}

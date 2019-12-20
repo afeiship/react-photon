@@ -17,7 +17,7 @@ export default class extends React.Component {
         className={classNames(
           CLASS_NAME,
           value ? `icon-${value}` : '',
-          classNames
+          className
         )}
         {...props}
       />

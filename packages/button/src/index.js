@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import './style.scss';
+
 const CLASS_NAME = 'btn';
 export default class extends React.Component {
   static propsTypes = {

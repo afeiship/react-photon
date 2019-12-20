@@ -1,7 +1,10 @@
+const merge = require('webpack-merge');
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const baseConfig = require('./webpack.base.conf');
 
 module.exports = (inEnv) => {
-  return {
+  return merge(baseConfig(inEnv), {
     mode: 'production',
     entry: {
       button: './packages/button/main',
@@ -27,21 +30,10 @@ module.exports = (inEnv) => {
       'window-content': './packages/window-content/main'
     },
     output: {
-      path: path.resolve(__dirname, 'dist/lib'),
+      path: path.resolve(__dirname, '..', 'dist/lib'),
       filename: '[name]/index.js',
       library: '[name]',
       libraryTarget: 'umd'
-    },
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader'
-          }
-        }
-      ]
     },
     externals: {
       classnames: 'classnames',
@@ -51,6 +43,7 @@ module.exports = (inEnv) => {
       'object-assign': 'object-assign',
       'prop-types': 'prop-types',
       '@feizheng/react-list': '@feizheng/react-list'
-    }
-  };
+    },
+    plugins: [new CleanWebpackPlugin()]
+  });
 };

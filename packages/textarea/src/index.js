@@ -9,7 +9,7 @@ export default class extends React.Component {
     const { className, ...props } = this.props;
     return (
       <textarea
-        className={classNames(CLASS_NAME, 'form-control', classNames)}
+        className={classNames(CLASS_NAME, 'form-control', className)}
         {...props}
       />
     );

@@ -69,7 +69,7 @@ export default class extends React.Component {
         className={classNames(
           CLASS_NAME,
           { 'table-striped': striped },
-          classNames
+          className
         )}
         {...props}>
         <thead>

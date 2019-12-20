@@ -1,0 +1,17 @@
+// window.css
+
+.window {
+  &.is-relative {
+    position: relative;
+  }
+
+  &.is-shadowable {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  }
+
+  &.is-bordered {
+    border: 1px solid #bebebe;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+}

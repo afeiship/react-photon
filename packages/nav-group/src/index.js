@@ -42,7 +42,7 @@ export default class extends React.Component {
     return (
       <ReactList
         nodeName="nav"
-        className={classNames(CLASS_NAME, classNames)}
+        className={classNames(CLASS_NAME, className)}
         {...props}
       />
     );

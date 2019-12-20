@@ -1,29 +1,24 @@
 import React from 'react';
 import ReactBlank from '@feizheng/react-blank';
-import {
-  Button,
-  ButtonGroup,
-  Checkbox,
-  FormGroup,
-  Icon,
-  Input,
-  ListGroup,
-  NavGroup,
-  Pane,
-  PaneGroup,
-  RadioGroup,
-  Select,
-  TabItem,
-  Table,
-  Tabs,
-  Textarea,
-  ToolbarActions,
-  ToolbarFooter,
-  ToolbarHeader,
-  Window,
-  WindowContent
-} from '../dist/react-photon';
-import './assets/style.css';
+import Window from '../packages/window/main';
+import WindowContent from '../packages/window-content/main';
+import ToolbarHeader from '../packages/toolbar-header/main';
+import ToolbarFooter from '../packages/toolbar-footer/main';
+import Button from '../packages/button/main';
+import ButtonGroup from '../packages/button-group/main';
+import FormGroup from '../packages/form-group/main';
+import Input from '../packages/input/main';
+import Textarea from '../packages/textarea/main';
+import Select from '../packages/select/main';
+import Checkbox from '../packages/checkbox/main';
+import Table from '../packages/table/main';
+import Pane from '../packages/pane/main';
+import PaneGroup from '../packages/pane-group/main';
+import RadioGroup from '../packages/radio-group/main';
+import Tabs from '../packages/tabs/main';
+import NavGroup from '../packages/nav-group/main';
+import TabItem from '../packages/tab-item/main';
+import ListGroup from '../packages/list-group/main';
 
 export default class extends React.Component {
   state = {
@@ -111,104 +106,111 @@ export default class extends React.Component {
     return (
       <div className="example-component-window">
         <Window>
-          <ToolbarHeader title="header" />
+          <ToolbarHeader title="react-photon" />
           <WindowContent style={{ flexDirection: 'column' }}>
-            <div className="is-body" style={{ padding: 10 }}>
-              <Button>Default</Button>
-              <Button theme="primary">Primary</Button>
-              <Button theme="positive">Positive</Button>
-              <Button theme="negative">Negative</Button>
-              <Button theme="warning">Warning</Button>
-            </div>
-            <div className="is-body" style={{ padding: 10 }}>
-              <Button size="mini">Default</Button>
-              <Button size="mini" theme="primary">
-                Primary
-              </Button>
-              <Button size="mini" theme="positive">
-                Positive
-              </Button>
-              <Button size="mini" theme="negative">
-                Negative
-              </Button>
-              <Button size="mini" theme="warning">
-                Warning
-              </Button>
-            </div>
-            <div className="is-body" style={{ padding: 10 }}>
-              <ButtonGroup>
-                <Button size="mini">Default</Button>
-                <Button size="mini" theme="primary">
-                  Primary
-                </Button>
-              </ButtonGroup>
-            </div>
+            <PaneGroup>
+              <Pane sidebar mini>
+                <ListGroup items={lists} />
+                <NavGroup items={navs} />
+              </Pane>
+              <Pane>
+                <div className="is-body" style={{ padding: 10 }}>
+                  <Button>Default</Button>
+                  <Button theme="primary">Primary</Button>
+                  <Button theme="positive">Positive</Button>
+                  <Button theme="negative">Negative</Button>
+                  <Button theme="warning">Warning</Button>
+                </div>
 
-            <div className="is-body" style={{ padding: 10 }}>
-              <form>
-                <FormGroup>
-                  <label>Email address</label>
-                  <Input
-                    name="email"
-                    onChange={this.onChange}
-                    type="email"
-                    placeholder="Email"
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <label>Password</label>
-                  <Input
-                    name="password"
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Password"
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <label>Description</label>
-                  <Textarea
-                    name="description"
-                    onChange={this.onChange}
-                    placeholder="description"
-                  />
-                </FormGroup>
-                <Select items={options} />
-                <Checkbox
-                  name="checkbox"
-                  onChange={this.onChange}
-                  label=" This is a checkbox"
-                />
+                <div className="is-body" style={{ padding: 10 }}>
+                  <Button size="mini">Default</Button>
+                  <Button size="mini" theme="primary">
+                    Primary
+                  </Button>
+                  <Button size="mini" theme="positive">
+                    Positive
+                  </Button>
+                  <Button size="mini" theme="negative">
+                    Negative
+                  </Button>
+                  <Button size="mini" theme="warning">
+                    Warning
+                  </Button>
+                </div>
+                <div className="is-body" style={{ padding: 10 }}>
+                  <ButtonGroup>
+                    <Button size="mini">Default</Button>
+                    <Button size="mini" theme="primary">
+                      Primary
+                    </Button>
+                  </ButtonGroup>
+                </div>
 
-                <RadioGroup
-                  items={options}
-                  name="radios"
-                  onChange={this.onChange}
-                />
-              </form>
+                <div className="is-body" style={{ padding: 10 }}>
+                  <form>
+                    <FormGroup>
+                      <label>Email address</label>
+                      <Input
+                        name="email"
+                        onChange={this.onChange}
+                        type="email"
+                        placeholder="Email"
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <label>Password</label>
+                      <Input
+                        name="password"
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="Password"
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <label>Description</label>
+                      <Textarea
+                        name="description"
+                        onChange={this.onChange}
+                        placeholder="description"
+                      />
+                    </FormGroup>
+                    <Select items={options} />
+                    <Checkbox
+                      name="checkbox"
+                      onChange={this.onChange}
+                      label=" This is a checkbox"
+                    />
 
-              <ReactBlank value={20} />
-              <Table striped columns={table.columns} items={table.items} />
-              <ReactBlank value={20} />
+                    <RadioGroup
+                      items={options}
+                      name="radios"
+                      onChange={this.onChange}
+                    />
+                  </form>
 
-              <Tabs value="0" onChange={this.onChange} name="tabs">
-                <TabItem title="a1">
-                  <div className="is-bd">Body1</div>
-                </TabItem>
-                <TabItem title="a2">
-                  <div className="is-bd">Body2</div>
-                </TabItem>
-                <TabItem title="a3">
-                  <div className="is-bd">Body3</div>
-                </TabItem>
-              </Tabs>
+                  <ReactBlank value={20} />
+                  <Table striped columns={table.columns} items={table.items} />
+                  <ReactBlank value={20} />
 
-              <ReactBlank value={20} />
-              <NavGroup items={navs} />
-              <ReactBlank value={20} />
-              <ListGroup items={lists} />
-            </div>
+                  <Tabs value="0" onChange={this.onChange} name="tabs">
+                    <TabItem title="a1">
+                      <div className="is-bd">Body1</div>
+                    </TabItem>
+                    <TabItem title="a2">
+                      <div className="is-bd">Body2</div>
+                    </TabItem>
+                    <TabItem title="a3">
+                      <div className="is-bd">Body3</div>
+                    </TabItem>
+                  </Tabs>
+
+                  <ReactBlank value={20} />
+                  <ReactBlank value={20} />
+                </div>
+              </Pane>
+            </PaneGroup>
           </WindowContent>
-          <ToolbarFooter title="footer" />
+          <ToolbarFooter title="developed by afeiship" />
         </Window>
       </div>
     );

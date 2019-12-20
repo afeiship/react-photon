@@ -35,7 +35,7 @@ export default class extends React.Component {
     const { className, items, template, onChange, ...props } = this.props;
     return (
       <select
-        className={classNames(CLASS_NAME, 'form-control', classNames)}
+        className={classNames(CLASS_NAME, 'form-control', className)}
         {...props}>
         {this.childView}
       </select>

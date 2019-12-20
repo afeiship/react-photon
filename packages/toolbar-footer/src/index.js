@@ -8,7 +8,7 @@ export default class extends React.Component {
   render() {
     const { className, title, children, ...props } = this.props;
     return (
-      <footer className={classNames('toolbar', CLASS_NAME, classNames)} {...props}>
+      <footer className={classNames('toolbar', CLASS_NAME, className)} {...props}>
         <h1 className="title">{title}</h1>
         { children }
       </footer>

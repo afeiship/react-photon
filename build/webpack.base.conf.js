@@ -1,22 +1,30 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = (inEnv) => {
   return {
     mode: 'development',
     entry: './public/index.js',
+    stats: 'errors-only',
     module: {
       rules: [
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader'
-          }
+          use: ['babel-loader']
         },
         {
           test: /\.css$/,
           use: ['style-loader', 'css-loader']
+        },
+        {
+          test: /\.scss$/,
+          use: [
+            'style-loader',
+            'css-hot-loader',
+            'css-loader',
+            'postcss-loader',
+            'sass-loader'
+          ]
         },
         {
           test: /\.(woff|eot|ttf)\??.*$/,
@@ -24,15 +32,6 @@ module.exports = (inEnv) => {
         }
       ]
     },
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: './public/index.ejs'
-      })
-    ],
-    devtool:'source-map',
-    devServer: {
-      stats: 'errors-only',
-      open: true
-    }
+    plugins: [new ProgressBarPlugin()]
   };
 };

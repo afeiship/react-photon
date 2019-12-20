@@ -34,7 +34,7 @@ export default class extends React.Component {
     } = this.props;
 
     return (
-      <div className={classNames(CLASS_NAME, 'checkbox', classNames)}>
+      <div className={classNames(CLASS_NAME, 'checkbox', className)}>
         <label>
           <input
             type="checkbox"

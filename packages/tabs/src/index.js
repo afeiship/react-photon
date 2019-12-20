@@ -77,7 +77,7 @@ export default class extends React.Component {
   render() {
     const { className, children, ...props } = this.props;
     return (
-      <section className={classNames(CLASS_NAME, classNames)} {...props}>
+      <section className={classNames(CLASS_NAME, className)} {...props}>
         <nav className={`tab-group ${CLASS_NAME}__menu`}>{this.menuView}</nav>
         <div className={`${CLASS_NAME}__content`}>{this.contentView}</div>
       </section>
