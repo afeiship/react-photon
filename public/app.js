@@ -213,13 +213,13 @@ export default class extends React.Component {
                   <ReactBlank value={20} />
 
                   <Tabs value="0" onChange={this.onChange} name="tabs">
-                    <TabItem title="a1">
+                    <TabItem title="tab1">
                       <div className="is-bd">Body1 Conten1</div>
                     </TabItem>
-                    <TabItem title="a2">
+                    <TabItem title="tab2">
                       <div className="is-bd">Body2 Content2</div>
                     </TabItem>
-                    <TabItem title="a3">
+                    <TabItem title="tab3">
                       <div className="is-bd">Body3 Content3</div>
                     </TabItem>
                   </Tabs>
@@ -233,7 +233,7 @@ export default class extends React.Component {
           <ToolbarFooter title="Developed by afeiship" />
         </Window>
 
-        <ReactSwUpdateTips value={hasUpdate}/>
+        <ReactSwUpdateTips value={this.state.hasUpdate}/>
       </div>
     );
   }
