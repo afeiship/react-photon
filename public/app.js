@@ -141,19 +141,15 @@ export default class extends React.Component {
                 <div className="is-body" style={{ padding: 10 }}>
                   <Button size="mini">Default</Button>
                   <Button size="mini" theme="primary">
-                    {' '}
                     Primary{' '}
                   </Button>
                   <Button size="mini" theme="positive">
-                    {' '}
                     Positive{' '}
                   </Button>
                   <Button size="mini" theme="negative">
-                    {' '}
                     Negative{' '}
                   </Button>
                   <Button size="mini" theme="warning">
-                    {' '}
                     Warning{' '}
                   </Button>
                 </div>
@@ -169,7 +165,7 @@ export default class extends React.Component {
                 <div className="is-body" style={{ padding: 10 }}>
                   <form>
                     <FormGroup>
-                      <label>Email address</label>
+                      <label>Email address:</label>
                       <Input
                         name="email"
                         onChange={this.onChange}
@@ -178,7 +174,7 @@ export default class extends React.Component {
                       />
                     </FormGroup>
                     <FormGroup>
-                      <label>Password</label>
+                      <label>Password:</label>
                       <Input
                         name="password"
                         onChange={this.onChange}

@@ -4,6 +4,7 @@ import App from './app';
 
 // styles:
 import '@feizheng/photon';
+import '@feizheng/react-sw-update-tips/dist/style.scss';
 import './assets/style.scss';
 
 ReactDOM.render(<App />, document.getElementById('app'));
