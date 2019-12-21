@@ -118,7 +118,8 @@ export default class extends React.Component {
   };
 
   render() {
-    const { options, table, navs, lists } = this.state;
+    const { options, table, navs, lists, hasUpdate } = this.state;
+    console.log('[log]: hasUpdate ->', hasUpdate);
     return (
       <div className="example-component-window">
         <Window>
@@ -230,7 +231,7 @@ export default class extends React.Component {
           <ToolbarFooter title="Developed by afeiship" />
         </Window>
 
-        <ReactSwUpdateTips value={this.state.hasUpdate} />
+        <ReactSwUpdateTips value={hasUpdate} />
       </div>
     );
   }
