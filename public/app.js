@@ -42,7 +42,7 @@ export default class extends React.Component {
           <input
             className="form-control"
             type="text"
-            placeholder="Search for someone!!!"
+            placeholder="Search for someone!"
           />
         )
       },
