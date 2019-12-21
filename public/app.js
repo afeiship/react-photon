@@ -42,7 +42,7 @@ export default class extends React.Component {
           <input
             className="form-control"
             type="text"
-            placeholder="Search for someone"
+            placeholder="Search for someone!!!"
           />
         )
       },
@@ -100,20 +100,27 @@ export default class extends React.Component {
   };
 
   componentDidMount() {
-    NxOfflineSw.install();
+    console.log('install sw!');
+    NxOfflineSw.install({
+      onUpdateReady: function() {
+        console.log('ready sw changed!');
+        NxOfflineSw.update();
+      }
+    });
   }
 
   onChange = (inEvent) => {
     const { name, value } = inEvent.target;
     console.log('[log]:', name, value);
   };
+
   render() {
     const { options, table, navs, lists } = this.state;
     return (
       <div className="example-component-window">
         <Window>
           <ToolbarHeader title="react-photon" />
-          <WindowContent style={{ flexDirection: 'column' }}>
+          <WindowContent>
             <PaneGroup>
               <Pane sidebar mini>
                 <ListGroup items={lists} />
@@ -130,18 +137,10 @@ export default class extends React.Component {
 
                 <div className="is-body" style={{ padding: 10 }}>
                   <Button size="mini">Default</Button>
-                  <Button size="mini" theme="primary">
-                    Primary
-                  </Button>
-                  <Button size="mini" theme="positive">
-                    Positive
-                  </Button>
-                  <Button size="mini" theme="negative">
-                    Negative
-                  </Button>
-                  <Button size="mini" theme="warning">
-                    Warning
-                  </Button>
+                  <Button size="mini" theme="primary"> Primary </Button>
+                  <Button size="mini" theme="positive"> Positive </Button>
+                  <Button size="mini" theme="negative"> Negative </Button>
+                  <Button size="mini" theme="warning"> Warning </Button>
                 </div>
                 <div className="is-body" style={{ padding: 10 }}>
                   <ButtonGroup>
@@ -200,13 +199,13 @@ export default class extends React.Component {
 
                   <Tabs value="0" onChange={this.onChange} name="tabs">
                     <TabItem title="a1">
-                      <div className="is-bd">Body1</div>
+                      <div className="is-bd">Body1 Conten1</div>
                     </TabItem>
                     <TabItem title="a2">
-                      <div className="is-bd">Body2</div>
+                      <div className="is-bd">Body2 Content2</div>
                     </TabItem>
                     <TabItem title="a3">
-                      <div className="is-bd">Body3</div>
+                      <div className="is-bd">Body3 Content3</div>
                     </TabItem>
                   </Tabs>
 
@@ -216,7 +215,7 @@ export default class extends React.Component {
               </Pane>
             </PaneGroup>
           </WindowContent>
-          <ToolbarFooter title="developed by afeiship" />
+          <ToolbarFooter title="Developed by afeiship" />
         </Window>
       </div>
     );

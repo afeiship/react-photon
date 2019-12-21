@@ -11,6 +11,7 @@
     "react",
     "photon",
     "photonkit",
+    "appify",
     "macos",
     "ios"
   ],
@@ -25,7 +26,8 @@
     "build:docs": "cross-env NODE_ENV=docs webpack -p",
     "build:production": "cross-env NODE_ENV=production webpack -p",
     "build:components": "cross-env NODE_ENV=components webpack -p",
-    "build": "npm-run-all --serial build:*"
+    "build": "npm-run-all --serial build:*",
+    "start": "node ./build/server.js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
@@ -46,6 +48,7 @@
     "cross-env": "^6.0.3",
     "css-hot-loader": "^1.4.4",
     "css-loader": "^3.3.2",
+    "express": "^4.17.1",
     "html-webpack-plugin": "^3.2.0",
     "npm-run-all": "^4.1.5",
     "offline-plugin": "^5.0.7",
