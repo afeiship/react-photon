@@ -195,6 +195,7 @@ export default class extends React.Component {
                       />
                     </FormGroup>
                     <Select items={options} />
+                    <ReactBlank value={20} />
                     <Checkbox
                       name="checkbox"
                       onChange={this.onChange}
@@ -233,7 +234,7 @@ export default class extends React.Component {
           <ToolbarFooter title="Developed by afeiship" />
         </Window>
 
-        <ReactSwUpdateTips value={this.state.hasUpdate}/>
+        <ReactSwUpdateTips value={this.state.hasUpdate} />
       </div>
     );
   }
