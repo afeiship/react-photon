@@ -19,10 +19,14 @@ import Tabs from '../packages/tabs/main';
 import NavGroup from '../packages/nav-group/main';
 import TabItem from '../packages/tab-item/main';
 import ListGroup from '../packages/list-group/main';
+
+// udpate sw + tips
 import NxOfflineSw from '@feizheng/next-offline-sw';
+import ReactSwUpdateTips from '@feizheng/react-sw-update-tips';
 
 export default class extends React.Component {
   state = {
+    hasUpdate: false,
     options: [
       { value: 'v1', label: 'Option one' },
       { value: 'v2', label: 'Option two' },
@@ -102,9 +106,8 @@ export default class extends React.Component {
   componentDidMount() {
     console.log('install sw!');
     NxOfflineSw.install({
-      onUpdateReady: function() {
-        console.log('ready sw changed!');
-        NxOfflineSw.update();
+      onUpdateReady: () => {
+        this.setState({ hasUpdate : true});
       }
     });
   }
@@ -137,10 +140,22 @@ export default class extends React.Component {
 
                 <div className="is-body" style={{ padding: 10 }}>
                   <Button size="mini">Default</Button>
-                  <Button size="mini" theme="primary"> Primary </Button>
-                  <Button size="mini" theme="positive"> Positive </Button>
-                  <Button size="mini" theme="negative"> Negative </Button>
-                  <Button size="mini" theme="warning"> Warning </Button>
+                  <Button size="mini" theme="primary">
+                    {' '}
+                    Primary{' '}
+                  </Button>
+                  <Button size="mini" theme="positive">
+                    {' '}
+                    Positive{' '}
+                  </Button>
+                  <Button size="mini" theme="negative">
+                    {' '}
+                    Negative{' '}
+                  </Button>
+                  <Button size="mini" theme="warning">
+                    {' '}
+                    Warning{' '}
+                  </Button>
                 </div>
                 <div className="is-body" style={{ padding: 10 }}>
                   <ButtonGroup>
@@ -217,6 +232,8 @@ export default class extends React.Component {
           </WindowContent>
           <ToolbarFooter title="Developed by afeiship" />
         </Window>
+
+        <ReactSwUpdateTips value={hasUpdate}/>
       </div>
     );
   }
