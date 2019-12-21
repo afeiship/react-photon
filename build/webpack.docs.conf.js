@@ -2,6 +2,7 @@ const merge = require('webpack-merge');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseConfig = require('./webpack.base.conf');
+const OfflinePlugin = require('offline-plugin');
 
 module.exports = (inEnv) => {
   return merge(baseConfig(inEnv), {
@@ -12,7 +13,8 @@ module.exports = (inEnv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './public/index.ejs'
-      })
+      }),
+      new OfflinePlugin()
     ]
   });
 };

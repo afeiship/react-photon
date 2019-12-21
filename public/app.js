@@ -19,6 +19,7 @@ import Tabs from '../packages/tabs/main';
 import NavGroup from '../packages/nav-group/main';
 import TabItem from '../packages/tab-item/main';
 import ListGroup from '../packages/list-group/main';
+import NxOfflineSw from '@feizheng/next-offline-sw';
 
 export default class extends React.Component {
   state = {
@@ -97,6 +98,11 @@ export default class extends React.Component {
       ]
     }
   };
+
+  componentDidMount() {
+    NxOfflineSw.install();
+  }
+
   onChange = (inEvent) => {
     const { name, value } = inEvent.target;
     console.log('[log]:', name, value);
