@@ -28,9 +28,9 @@ export default class extends React.Component {
   state = {
     hasUpdate: false,
     options: [
-      { value: 'v1', label: 'Option one' },
-      { value: 'v2', label: 'Option two' },
-      { value: 'v3', label: 'Option three' }
+      { value: 'v1', label: 'Option one - 1' },
+      { value: 'v2', label: 'Option two - 2' },
+      { value: 'v3', label: 'Option three - 3' }
     ],
     navs: [
       { type: 'title', label: 'Favorites' },
