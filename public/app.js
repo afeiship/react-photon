@@ -106,6 +106,7 @@ export default class extends React.Component {
   componentDidMount() {
     NxOfflineSw.install({
       onUpdateReady: () => {
+        console.log('on upate ready?');
         this.setState({ hasUpdate: true });
       }
     });
