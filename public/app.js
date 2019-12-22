@@ -119,7 +119,7 @@ export default class extends React.Component {
 
   render() {
     const { options, table, navs, lists, hasUpdate } = this.state;
-    console.log('[log]: hasUpdate ->', hasUpdate);
+    console.log('[log]:: hasUpdate ->', hasUpdate);
     return (
       <div className="example-component-window">
         <Window>
