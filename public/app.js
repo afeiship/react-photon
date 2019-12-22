@@ -111,10 +111,6 @@ export default class extends React.Component {
     });
   }
 
-  onUpdateChange = (inEvent) => {
-    this.setState({ hasUpdate: false });
-  };
-
   onChange = (inEvent) => {
     const { name, value } = inEvent.target;
     console.log('[log]:', name, value);
@@ -122,7 +118,6 @@ export default class extends React.Component {
 
   render() {
     const { options, table, navs, lists, hasUpdate } = this.state;
-    console.log('[log]: hasUpdate!', hasUpdate);
     return (
       <div className="example-component-window">
         <Window>
@@ -234,7 +229,7 @@ export default class extends React.Component {
           <ToolbarFooter title="Developed by afeiship" />
         </Window>
 
-        <ReactSwUpdateTips value={hasUpdate}/>
+        <ReactSwUpdateTips value={hasUpdate} />
       </div>
     );
   }
