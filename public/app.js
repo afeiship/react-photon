@@ -212,13 +212,13 @@ export default class extends React.Component {
 
                   <Tabs value="0" onChange={this.onChange} name="tabs">
                     <TabItem title="tab1">
-                      <div className="is-bd">Body1 Conten1</div>
+                      <div className="is-bd">Body1 content1</div>
                     </TabItem>
                     <TabItem title="tab2">
-                      <div className="is-bd">Body2 Content2</div>
+                      <div className="is-bd">Body2 content2</div>
                     </TabItem>
                     <TabItem title="tab3">
-                      <div className="is-bd">Body3 Content3</div>
+                      <div className="is-bd">Body3 content3</div>
                     </TabItem>
                   </Tabs>
 
