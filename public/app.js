@@ -46,7 +46,7 @@ export default class extends React.Component {
           <input
             className="form-control"
             type="text"
-            placeholder="Search for someone!"
+            placeholder="Search for someone"
           />
         )
       },
@@ -104,13 +104,18 @@ export default class extends React.Component {
   };
 
   componentDidMount() {
-    console.log('install sw!');
+    console.log('install sw!!');
     NxOfflineSw.install({
       onUpdateReady: () => {
-        this.setState({ hasUpdate : true});
+        NxOfflineSw.applyUpdate();
+        this.setState({ hasUpdate: true });
       }
     });
   }
+
+  onUpdateChange = (inEvent) => {
+    this.setState({ hasUpdate: false });
+  };
 
   onChange = (inEvent) => {
     const { name, value } = inEvent.target;
@@ -119,7 +124,7 @@ export default class extends React.Component {
 
   render() {
     const { options, table, navs, lists, hasUpdate } = this.state;
-    console.log('[log]:: hasUpdate ->', hasUpdate);
+    console.log('[log]: hasUpdate!!', hasUpdate);
     return (
       <div className="example-component-window">
         <Window>
@@ -231,7 +236,7 @@ export default class extends React.Component {
           <ToolbarFooter title="Developed by afeiship" />
         </Window>
 
-        <ReactSwUpdateTips hasUpdate={hasUpdate} />
+        <ReactSwUpdateTips value={hasUpdate} onChange={this.onUpdateChange} />
       </div>
     );
   }

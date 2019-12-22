@@ -18,7 +18,12 @@ module.exports = (inEnv) => {
       new HtmlWebpackPlugin({
         template: './public/index.ejs'
       }),
-      new OfflinePlugin()
+      new OfflinePlugin({
+        excludes: ['fallback.js'],
+        ServiceWorker: {
+          events: true
+        }
+      })
     ]
   });
 };
