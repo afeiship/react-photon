@@ -104,10 +104,8 @@ export default class extends React.Component {
   };
 
   componentDidMount() {
-    console.log('install sw!!');
     NxOfflineSw.install({
       onUpdateReady: () => {
-        NxOfflineSw.applyUpdate();
         this.setState({ hasUpdate: true });
       }
     });
@@ -236,7 +234,7 @@ export default class extends React.Component {
           <ToolbarFooter title="Developed by afeiship" />
         </Window>
 
-        <ReactSwUpdateTips value={hasUpdate} onChange={this.onUpdateChange} />
+        <ReactSwUpdateTips value={hasUpdate}/>
       </div>
     );
   }
