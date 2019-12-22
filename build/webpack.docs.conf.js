@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseConfig = require('./webpack.base.conf');
 const OfflinePlugin = require('offline-plugin');
@@ -16,6 +17,9 @@ module.exports = (inEnv) => {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: './public/index.ejs'
+      }),
+      new webpack.EnvironmentPlugin({
+        NODE_ENV: 'production'
       }),
       new OfflinePlugin()
     ]
