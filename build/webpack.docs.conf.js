@@ -18,9 +18,6 @@ module.exports = (inEnv) => {
       new HtmlWebpackPlugin({
         template: './public/index.ejs'
       }),
-      new webpack.EnvironmentPlugin({
-        NODE_ENV: 'production'
-      }),
       new OfflinePlugin()
     ]
   });
