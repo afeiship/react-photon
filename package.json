@@ -23,7 +23,7 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=local webpack-dev-server",
-    "build:docs": "cross-env NODE_ENV=docs webpack -p",
+    "build:docs": "cross-env NODE_ENV=docs webpack",
     "build:production": "cross-env NODE_ENV=production webpack -p",
     "build:components": "cross-env NODE_ENV=components webpack -p",
     "build": "npm-run-all --serial build:*",
@@ -41,7 +41,7 @@
     "@feizheng/next-offline-sw": "^1.0.0",
     "@feizheng/rake-git": "^1.2.1",
     "@feizheng/react-blank": "^1.0.0",
-    "@feizheng/react-sw-update-tips": "^1.0.2",
+    "@feizheng/react-sw-update-tips": "^1.0.3",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-import": "^1.13.0",
