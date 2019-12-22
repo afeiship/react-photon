@@ -231,7 +231,7 @@ export default class extends React.Component {
           <ToolbarFooter title="Developed by afeiship" />
         </Window>
 
-        <ReactSwUpdateTips value={hasUpdate} />
+        <ReactSwUpdateTips hasUpdate={hasUpdate} />
       </div>
     );
   }
