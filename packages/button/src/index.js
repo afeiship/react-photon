@@ -5,16 +5,13 @@ import classNames from 'classnames';
 import './style.scss';
 
 const CLASS_NAME = 'btn';
+const THEMES = ['default', 'primary', 'positive', 'negative', 'warning'];
+const SIZES = ['mini', 'large'];
+
 export default class extends React.Component {
   static propsTypes = {
-    theme: PropTypes.oneOf([
-      'default',
-      'primary',
-      'positive',
-      'negative',
-      'warning'
-    ]),
-    size: PropTypes.oneOf(['mini', 'large']),
+    theme: PropTypes.oneOf(THEMES),
+    size: PropTypes.oneOf(SIZES),
     active: PropTypes.bool,
     dropdown: PropTypes.bool,
     right: PropTypes.bool
@@ -40,7 +37,7 @@ export default class extends React.Component {
           size ? `btn-${size}` : '',
           theme ? `btn-${theme}` : '',
           {
-            active: active,
+            active,
             'btn-dropdown': dropdown,
             'pull-right': right
           },

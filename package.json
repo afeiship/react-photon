@@ -42,6 +42,7 @@
     "@feizheng/rake-git": "^1.2.1",
     "@feizheng/react-blank": "^1.0.0",
     "@feizheng/react-sw-update-tips": "^1.0.3",
+    "@feizheng/webpack-mpa-entries": "^1.0.2",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-import": "^1.13.0",
