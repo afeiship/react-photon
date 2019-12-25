@@ -23,7 +23,7 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=local webpack-dev-server",
-    "snippet":"node ./build/raw-snippets.js",
+    "snippet": "node ./build/raw-snippets.js",
     "build:docs": "cross-env NODE_ENV=docs NODE_OPTIONS=--max_old_space_size=4096 webpack -p",
     "build:production": "cross-env NODE_ENV=production webpack -p",
     "build:components": "cross-env NODE_ENV=components webpack -p",
@@ -77,6 +77,7 @@
     "@feizheng/photon": "^1.0.0",
     "@feizheng/react-highlight": "^1.0.1",
     "@feizheng/react-list": "^1.0.0",
+    "@feizheng/webkit-sass-reset": "^1.0.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2"
   },

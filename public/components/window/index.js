@@ -5,7 +5,7 @@ import ToolbarFooter from 'packages/toolbar-footer/main';
 
 export default () => {
   return (
-    <div className="padded">
+    <div className="padded exmaple-window">
       <Window relative>
         <ToolbarHeader title="window header" />
         <WindowContent style={{ flexDirection: 'column' }}>

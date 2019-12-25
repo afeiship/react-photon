@@ -3,6 +3,9 @@
 }
 
 @import "~@feizheng/react-clipboard/dist/style.scss";
+@import "~@feizheng/webkit-sass-reset/dist/base.scss";
+
+$base-font-family: none;
 
 .example-component-window {
   height: 90%;
@@ -18,9 +21,19 @@
     }
   }
 
-  .exmaple-button{
-    .btn{
+  .exmaple-button {
+    .btn {
       margin-right: 5px;
+    }
+  }
+
+  .exmaple-window {
+    p {
+      border-left: 4px solid #eee;
+      padding-left: 10px;
+      & + p {
+        margin-top: 10px;
+      }
     }
   }
 
