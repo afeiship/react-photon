@@ -1,9 +1,17 @@
-#app{
-  height:100%;
+#app {
+  height: 100%;
 }
 .example-component-window {
-  height: 100%;
-  width: 80%;
-  margin: 0 auto;
+  height: 90%;
+  width: 90%;
+  margin: 5% auto;
   position: relative;
+  .exmaple-icon {
+    .icon {
+      margin-right: 5px;
+      margin-left: 5px;
+      font-size: 20px;
+      color: #666;
+    }
+  }
 }

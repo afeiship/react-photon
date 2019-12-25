@@ -7,8 +7,7 @@ module.exports = (inEnv) => {
     mode: 'development',
     devtool: 'source-map',
     devServer: {
-      stats: 'errors-only',
-      open: true
+      stats: 'errors-only'
     },
     plugins: [
       new HtmlWebpackPlugin({

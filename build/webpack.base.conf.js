@@ -1,10 +1,21 @@
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const { resolve } = require('path');
+const webpack = require('webpack');
+
+console.log('root path:', resolve(__dirname, '..', 'src'));
 
 module.exports = (inEnv) => {
   return {
     mode: 'development',
     entry: './public/index.js',
     stats: 'errors-only',
+    resolve: {
+      alias: {
+        root: resolve(__dirname, '..'),
+        '@': resolve(__dirname, '..', 'src'),
+        packages: resolve(__dirname, '..', 'packages')
+      }
+    },
     module: {
       rules: [
         {
@@ -18,13 +29,7 @@ module.exports = (inEnv) => {
         },
         {
           test: /\.scss$/,
-          use: [
-            'style-loader',
-            'css-hot-loader',
-            'css-loader',
-            'postcss-loader',
-            'sass-loader'
-          ]
+          use: ['style-loader', 'css-hot-loader', 'css-loader', 'postcss-loader', 'sass-loader']
         },
         {
           test: /\.(woff|eot|ttf)\??.*$/,
@@ -32,6 +37,12 @@ module.exports = (inEnv) => {
         }
       ]
     },
-    plugins: [new ProgressBarPlugin()]
+    plugins: [
+      new ProgressBarPlugin(),
+      new webpack.ProvidePlugin({
+        React: 'react',
+        ReactDOM: 'react-dom'
+      })
+    ]
   };
 };

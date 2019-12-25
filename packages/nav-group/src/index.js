@@ -3,16 +3,24 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import ReactList from '@feizheng/react-list';
 import Icon from '../../icon/main';
+import { NavLink } from 'react-router-dom';
 
 const CLASS_NAME = 'nav-group';
 const DEFAULT_TEMPLATE = ({ item, index }) => {
-  const { type, icon, label, active } = item;
+  const { type, icon, label, to, active } = item;
   switch (type) {
     case 'title':
       return (
         <h5 key={index} className="nav-group-title">
           {label}
         </h5>
+      );
+    case 'nav-link':
+      return (
+        <NavLink key={index} to={to} className={classNames('nav-group-item', { active })}>
+          <Icon value={icon} />
+          {label}
+        </NavLink>
       );
     default:
       return (
@@ -39,12 +47,6 @@ export default class extends React.Component {
 
   render() {
     const { className, ...props } = this.props;
-    return (
-      <ReactList
-        nodeName="nav"
-        className={classNames(CLASS_NAME, className)}
-        {...props}
-      />
-    );
+    return <ReactList nodeName="nav" className={classNames(CLASS_NAME, className)} {...props} />;
   }
 }
