@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="https://afeiship.github.io/react-photon/">
+    <img width="880" src="https://tva1.sinaimg.cn/large/006tNbRwgy1ga9aqq6kf2j31160u07gm.jpg">
+  </a>
+</p>
+
+
 # react-photon
 > Photon components built with React.
 
