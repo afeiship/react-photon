@@ -3,6 +3,7 @@ import Checkbox from 'packages/checkbox/main';
 import Input from 'packages/input/main';
 import RadioGroup from 'packages/radio-group/main';
 import Textarea from 'packages/textarea/main';
+import Select from 'packages/select/main';
 
 import ReactBlank from '@feizheng/react-blank';
 
@@ -18,21 +19,21 @@ export default () => {
       <form>
         <FormGroup>
           <label>Email address:</label>
-          <Input name="email" onChange={this.onChange} type="email" placeholder="Email" />
+          <Input name="email" type="email" placeholder="Email" />
         </FormGroup>
         <FormGroup>
           <label>Password:</label>
-          <Input name="password" onChange={this.onChange} type="password" placeholder="Password" />
+          <Input name="password" type="password" placeholder="Password" />
         </FormGroup>
         <FormGroup>
           <label>Description</label>
-          <Textarea name="description" onChange={this.onChange} placeholder="description" />
+          <Textarea name="description" placeholder="description" />
         </FormGroup>
         <Select items={options} />
         <ReactBlank value={20} />
-        <Checkbox name="checkbox" onChange={this.onChange} label=" This is a checkbox" />
+        <Checkbox name="checkbox" label=" This is a checkbox" />
 
-        <RadioGroup items={options} name="radios" onChange={this.onChange} />
+        <RadioGroup items={options} name="radios" />
       </form>
     </div>
   );
