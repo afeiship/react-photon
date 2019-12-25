@@ -1,10 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
+import noop from '@feizheng/noop';
 
 const CLASS_NAME = 'tabs';
 
 export default class extends React.Component {
   static displayName = CLASS_NAME;
+  static defaultProps = {
+    onChange: noop
+  };
 
   constructor(inProps) {
     super(inProps);

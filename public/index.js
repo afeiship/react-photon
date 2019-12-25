@@ -5,7 +5,7 @@ import App from './app';
 // styles:
 import '@feizheng/photon';
 import '@feizheng/react-sw-update-tips/dist/style.scss';
-import 'highlight.js/styles/atom-one-dark.css';
+import 'highlight.js/styles/github.css';
 import './assets/style.scss';
 
 ReactDOM.render(<App />, document.getElementById('app'));
