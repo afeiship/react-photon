@@ -57,6 +57,7 @@
     "offline-plugin": "^5.0.7",
     "postcss-loader": "^3.0.0",
     "progress-bar-webpack-plugin": "^1.12.1",
+    "raw-loader": "^4.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router": "^5.1.2",
@@ -72,6 +73,7 @@
   "dependencies": {
     "@feizheng/noop": "^1.0.0",
     "@feizheng/photon": "^1.0.0",
+    "@feizheng/react-highlight": "^1.0.0",
     "@feizheng/react-list": "^1.0.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2"

@@ -11,6 +11,7 @@ import NavGroup from '../packages/nav-group/main';
 import NxOfflineSw from '@feizheng/next-offline-sw';
 import ReactSwUpdateTips from '@feizheng/react-sw-update-tips';
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import ReactHighlight from '@feizheng/react-highlight';
 
 const routes = require('root/public/assets/routes.json');
 
@@ -62,11 +63,12 @@ export default class extends React.Component {
                   <Switch>
                     {routes.map((item) => {
                       return (
-                        <Route
-                          key={item}
-                          path={`/${item}`}
-                          children={require(`./components/${item}`).default}
-                        />
+                        <Route key={item} path={`/${item}`}>
+                          {React.createElement(require(`./components/${item}`).default)}
+                          <ReactHighlight lang="javascript">
+                            {require(`./components/${item}/index.js.snippet`).default}
+                          </ReactHighlight>
+                        </Route>
                       );
                     })}
 

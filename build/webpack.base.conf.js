@@ -24,6 +24,11 @@ module.exports = (inEnv) => {
           use: ['babel-loader']
         },
         {
+          test: /\.snippet$/,
+          exclude: /node_modules/,
+          use: ['raw-loader']
+        },
+        {
           test: /\.css$/,
           use: ['style-loader', 'css-loader']
         },
@@ -41,7 +46,8 @@ module.exports = (inEnv) => {
       new ProgressBarPlugin(),
       new webpack.ProvidePlugin({
         React: 'react',
-        ReactDOM: 'react-dom'
+        ReactDOM: 'react-dom',
+        ReactHighlight: '@feizheng/react-highlight'
       })
     ]
   };
