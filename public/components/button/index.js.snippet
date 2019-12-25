@@ -3,7 +3,7 @@ import ReactBlank from '@feizheng/react-blank';
 
 export default () => {
   return (
-    <div className="padded">
+    <div className="padded exmaple-button">
       <Button>Default</Button>
       <Button theme="primary">Primary</Button>
       <Button theme="positive">Positive</Button>
