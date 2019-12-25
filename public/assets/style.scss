@@ -1,6 +1,9 @@
 #app {
   height: 100%;
 }
+
+@import "~@feizheng/react-clipboard/dist/style.scss";
+
 .example-component-window {
   height: 90%;
   width: 90%;
@@ -20,8 +23,24 @@
     border: 2px dashed #ddd;
     margin: 20px 10px 20px;
     padding: 5px;
+    position: relative;
     &:hover {
       border-color: #ccc;
+      .react-clipboard {
+        opacity: 1;
+      }
+    }
+    .react-clipboard {
+      opacity: 0;
+      right: 2px;
+      top: 2px;
+      position: absolute;
+      transition: all 0.3s;
+      &__clippy {
+        padding: 0;
+        top: 3px;
+        position: relative;
+      }
     }
   }
 }

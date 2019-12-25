@@ -12,6 +12,7 @@ import NxOfflineSw from '@feizheng/next-offline-sw';
 import ReactSwUpdateTips from '@feizheng/react-sw-update-tips';
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import ReactHighlight from '@feizheng/react-highlight';
+import ReactClipboard from '@feizheng/react-clipboard';
 
 const routes = require('root/public/assets/routes.json');
 
@@ -62,11 +63,14 @@ export default class extends React.Component {
                 <Pane>
                   <Switch>
                     {routes.map((item) => {
+                      const code = require(`./components/${item}/index.js.snippet`).default;
                       return (
                         <Route key={item} path={`/${item}`}>
                           {React.createElement(require(`./components/${item}`).default)}
-                          <ReactHighlight lang="javascript">
-                            {require(`./components/${item}/index.js.snippet`).default}
+                          <ReactHighlight
+                            lang="javascript"
+                            extra={<ReactClipboard value={code} />}>
+                            {code}
                           </ReactHighlight>
                         </Route>
                       );

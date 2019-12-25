@@ -41,6 +41,7 @@
     "@feizheng/next-offline-sw": "^1.0.0",
     "@feizheng/rake-git": "^1.2.1",
     "@feizheng/react-blank": "^1.0.0",
+    "@feizheng/react-clipboard": "^1.0.0",
     "@feizheng/react-sw-update-tips": "^1.0.3",
     "@feizheng/webpack-mpa-entries": "^1.0.2",
     "autoprefixer": "^9.7.3",
@@ -73,7 +74,7 @@
   "dependencies": {
     "@feizheng/noop": "^1.0.0",
     "@feizheng/photon": "^1.0.0",
-    "@feizheng/react-highlight": "^1.0.0",
+    "@feizheng/react-highlight": "^1.0.1",
     "@feizheng/react-list": "^1.0.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2"
