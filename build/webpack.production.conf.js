@@ -14,6 +14,7 @@ module.exports = (inEnv) => {
     externals: {
       classnames: 'classnames',
       react: 'react',
+      'react-is':'react-is',
       'react-dom': 'react-dom',
       '@feizheng/noop': '@feizheng/noop',
       'object-assign': 'object-assign',

@@ -40,8 +40,6 @@ export default class extends React.Component {
   get childView() {
     const { rowKey, items, columns, template } = this.props;
     return items.map((item, index) => {
-      console.log(item[rowKey]);
-
       return (
         <tr key={item[rowKey]}>
           {columns.map((column) => {

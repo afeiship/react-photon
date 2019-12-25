@@ -18,6 +18,8 @@ export default class extends React.Component {
   state = {
     hasUpdate: false,
     navs: [
+      { type: 'title', label: 'Preview' },
+      { type: 'nav-link', icon: 'search', label: 'all', to: '/all' },
       { type: 'title', label: 'Components' },
       { type: 'nav-link', icon: 'note-beamed', label: 'button', to: '/button' },
       { type: 'nav-link', icon: 'music', label: 'button-group', to: '/button-group' },
@@ -68,7 +70,8 @@ export default class extends React.Component {
                       );
                     })}
 
-                    <Route exact path="/" children={require('./components/all').default} />
+                    <Route path="/all" children={require('./components/all').default} />
+                    <Redirect to="/all" />
                   </Switch>
                 </Pane>
               </Router>
