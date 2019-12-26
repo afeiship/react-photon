@@ -1,20 +1,21 @@
 import React from 'react';
-import Window from '../packages/window/main';
-import WindowContent from '../packages/window-content/main';
-import ToolbarHeader from '../packages/toolbar-header/main';
-import ToolbarFooter from '../packages/toolbar-footer/main';
-import Pane from '../packages/pane/main';
-import PaneGroup from '../packages/pane-group/main';
-import NavGroup from '../packages/nav-group/main';
+import Window from 'packages/window/main';
+import WindowContent from 'packages/window-content/main';
+import ToolbarHeader from 'packages/toolbar-header/main';
+import ToolbarFooter from 'packages/toolbar-footer/main';
+import Pane from 'packages/pane/main';
+import PaneGroup from 'packages/pane-group/main';
+import NavGroup from 'packages/nav-group/main';
 
 // udpate sw + tips
 import NxOfflineSw from '@feizheng/next-offline-sw';
 import ReactSwUpdateTips from '@feizheng/react-sw-update-tips';
-import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import ReactHighlight from '@feizheng/react-highlight';
 import ReactClipboard from '@feizheng/react-clipboard';
 import ReactFullImage from '@feizheng/react-full-image';
+import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 
+// navs,routes
 const routes = require('root/public/assets/routes.json');
 const navs = require('root/public/assets/navs.json');
 
