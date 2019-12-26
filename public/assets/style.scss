@@ -31,7 +31,8 @@
     }
   }
 
-  .exmaple-window {
+  .exmaple-window,
+  .exmaple-tabs {
     p {
       border-left: 4px solid #eee;
       padding-left: 10px;
@@ -42,9 +43,9 @@
   }
 
   .react-highlight {
-    border-radius: 4px;
-    border: 2px dashed #ddd;
-    margin: 20px 10px 20px;
+    border-radius: 2px;
+    border: 1px dashed #ddd;
+    margin: 10px 10px 20px;
     padding: 5px;
     position: relative;
     &:hover {

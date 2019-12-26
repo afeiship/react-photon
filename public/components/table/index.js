@@ -1,4 +1,7 @@
 import Table from 'packages/table/main';
+import Window from 'packages/window/main';
+import WindowContent from 'packages/window-content/main';
+import ReactBlank from '@feizheng/react-blank';
 
 export default () => {
   const table = {
@@ -35,7 +38,17 @@ export default () => {
 
   return (
     <div className="padded">
-      <Table striped columns={table.columns} items={table.items} />
+      <Window relative>
+        <WindowContent>
+          <Table columns={table.columns} items={table.items} />
+        </WindowContent>
+      </Window>
+      <ReactBlank value={20} />
+      <Window relative>
+        <WindowContent>
+          <Table striped columns={table.columns} items={table.items} />
+        </WindowContent>
+      </Window>
     </div>
   );
 };

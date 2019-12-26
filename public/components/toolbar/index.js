@@ -10,14 +10,20 @@ export default () => {
       <ToolbarHeader title="toolbar">
         <ToolbarActions>
           <ButtonGroup>
-            <Button>
+            <Button size="mini">
               <Icon value="home" />
             </Button>
-            <Button>
+            <Button size="mini">
               <Icon value="folder" />
             </Button>
-            <Button>
+            <Button size="mini" active>
               <Icon value="cloud" />
+            </Button>
+            <Button size="mini">
+              <Icon value="popup" />
+            </Button>
+            <Button size="mini">
+              <Icon value="shuffle" />
             </Button>
           </ButtonGroup>
         </ToolbarActions>
