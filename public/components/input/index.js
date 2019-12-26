@@ -1,9 +1,10 @@
 import FormGroup from 'packages/form-group/main';
 import Input from 'packages/input/main';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   return (
-    <div className="padded">
+    <Container>
       <form>
         <FormGroup>
           <label>Email address:</label>
@@ -14,6 +15,6 @@ export default () => {
           <Input name="password" type="password" placeholder="Password" />
         </FormGroup>
       </form>
-    </div>
+    </Container>
   );
 };

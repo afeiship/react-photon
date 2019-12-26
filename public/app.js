@@ -41,6 +41,10 @@ export default class extends React.Component {
     ]
   };
 
+  get component() {
+    return location.hash.slice(2);
+  }
+
   componentDidMount() {
     NxOfflineSw.install({
       onUpdateReady: () => {
@@ -69,7 +73,7 @@ export default class extends React.Component {
                       return (
                         <Route key={item} path={`/${item}`}>
                           {React.createElement(require(`./components/${item}`).default)}
-                          <ReactHighlight lang="javascript" extra={<ReactClipboard value={code} />}>
+                          <ReactHighlight extra={<ReactClipboard value={code} />}>
                             {code}
                           </ReactHighlight>
                         </Route>

@@ -2,10 +2,11 @@ import Button from 'packages/button/main';
 import ButtonGroup from 'packages/button-group/main';
 import Icon from 'packages/icon/main';
 import ReactBlank from '@feizheng/react-blank';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   return (
-    <div className="padded">
+    <Container>
       <ButtonGroup>
         <Button size="mini">Mini</Button>
         <Button size="mini">Normal</Button>
@@ -47,6 +48,6 @@ export default () => {
           <Icon value="shuffle" />
         </Button>
       </ButtonGroup>
-    </div>
+    </Container>
   );
 };

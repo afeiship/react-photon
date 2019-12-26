@@ -1,4 +1,5 @@
 import ListGroup from 'packages/list-group/main';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   const lists = [
@@ -28,8 +29,8 @@ export default () => {
   ];
 
   return (
-    <div className="padded">
+    <Container>
       <ListGroup items={lists} />
-    </div>
+    </Container>
   );
 };

@@ -1,9 +1,10 @@
 import Button from 'packages/button/main';
 import ReactBlank from '@feizheng/react-blank';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   return (
-    <div className="padded exmaple-button">
+    <Container>
       <Button>Default</Button>
       <Button theme="primary">Primary</Button>
       <Button theme="positive">Positive</Button>
@@ -23,6 +24,6 @@ export default () => {
       <Button size="mini" theme="warning">
         Warning
       </Button>
-    </div>
+    </Container>
   );
 };
