@@ -28,7 +28,7 @@ export default class extends React.Component {
             'is-shadowable': shadowable,
             'is-bordered': bordered
           },
-          classNames
+          className
         )}
         {...props}
       />

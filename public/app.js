@@ -54,7 +54,7 @@ export default class extends React.Component {
     return (
       <div className="example-component-window">
         <ReactFullImage src="http://photonkit.com/assets/img/photo-couch.png" />
-        <Window>
+        <Window className="webkit-sassui-animate-float">
           <ToolbarHeader title="react-photon" />
           <WindowContent>
             <PaneGroup>
