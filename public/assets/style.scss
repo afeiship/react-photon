@@ -8,7 +8,7 @@ $base-font-family: none;
 .example-component-window {
   height: 100%;
   position: relative;
-  .window{
+  >.window{
     width: 80%;
     height:80%;
     left:50%;
