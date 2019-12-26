@@ -13,6 +13,7 @@ import ReactSwUpdateTips from '@feizheng/react-sw-update-tips';
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import ReactHighlight from '@feizheng/react-highlight';
 import ReactClipboard from '@feizheng/react-clipboard';
+import ReactFullImage from '@feizheng/react-full-image';
 
 const routes = require('root/public/assets/routes.json');
 
@@ -52,6 +53,7 @@ export default class extends React.Component {
     const { navs, hasUpdate } = this.state;
     return (
       <div className="example-component-window">
+        <ReactFullImage src="http://photonkit.com/assets/img/photo-couch.png" />
         <Window>
           <ToolbarHeader title="react-photon" />
           <WindowContent>
@@ -67,9 +69,7 @@ export default class extends React.Component {
                       return (
                         <Route key={item} path={`/${item}`}>
                           {React.createElement(require(`./components/${item}`).default)}
-                          <ReactHighlight
-                            lang="javascript"
-                            extra={<ReactClipboard value={code} />}>
+                          <ReactHighlight lang="javascript" extra={<ReactClipboard value={code} />}>
                             {code}
                           </ReactHighlight>
                         </Route>

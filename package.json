@@ -43,6 +43,7 @@
     "@feizheng/rake-git": "^1.2.1",
     "@feizheng/react-blank": "^1.0.0",
     "@feizheng/react-clipboard": "^1.0.0",
+    "@feizheng/react-full-image": "^1.0.0",
     "@feizheng/react-sw-update-tips": "^1.0.3",
     "@feizheng/webpack-mpa-entries": "^1.0.2",
     "autoprefixer": "^9.7.3",
