@@ -34,8 +34,9 @@
     }
   }
 
-  .exmaple-button {
-    .btn {
+  .exmaple-button,
+  .exmaple-all {
+    >.btn {
       margin-right: 5px;
     }
   }
