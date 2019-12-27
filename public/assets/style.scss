@@ -20,12 +20,12 @@
   .layout-header {
     border-left: 4px solid #eee;
     padding-left: 10px;
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
 
   .exmaple-icon,
   .exmaple-all {
-    >.icon {
+    > .icon {
       margin-right: 5px;
       margin-left: 5px;
       font-size: 24px;
@@ -35,7 +35,7 @@
 
   .exmaple-button,
   .exmaple-all {
-    >.btn {
+    > .btn {
       margin-right: 5px;
     }
   }
