@@ -4,7 +4,7 @@ import Input from 'packages/input/main';
 import RadioGroup from 'packages/radio-group/main';
 import Textarea from 'packages/textarea/main';
 import Select from 'packages/select/main';
-
+import Container from 'root/public/components/layout/container';
 import ReactBlank from '@feizheng/react-blank';
 
 export default () => {
@@ -15,7 +15,7 @@ export default () => {
   ];
 
   return (
-    <div className="padded">
+    <Container>
       <form>
         <FormGroup>
           <label>Email address:</label>
@@ -35,6 +35,6 @@ export default () => {
 
         <RadioGroup items={options} name="radios" />
       </form>
-    </div>
+    </Container>
   );
 };
