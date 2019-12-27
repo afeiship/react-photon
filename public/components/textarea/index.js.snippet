@@ -1,9 +1,10 @@
 import Textarea from 'packages/textarea/main';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   return (
-    <div className="padded">
+    <Container className="padded">
       <Textarea name="description" placeholder="description" />
-    </div>
+    </Container>
   );
 };

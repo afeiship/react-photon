@@ -1,4 +1,5 @@
 import NavGroup from 'packages/nav-group/main';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   const navs = [
@@ -10,8 +11,8 @@ export default () => {
   ];
 
   return (
-    <div className="padded">
+    <Container>
       <NavGroup items={navs} />
-    </div>
+    </Container>
   );
 };

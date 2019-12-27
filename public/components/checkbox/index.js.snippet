@@ -1,8 +1,9 @@
 import Checkbox from 'packages/checkbox/main';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   return (
-    <div className="padded">
+    <Container>
       <Checkbox
         name="checkbox"
         onChange={(e) => {
@@ -10,6 +11,6 @@ export default () => {
         }}
         label=" This is a checkbox"
       />
-    </div>
+    </Container>
   );
 };

@@ -3,10 +3,11 @@ import Icon from 'packages/icon/main';
 import Button from 'packages/button/main';
 import ButtonGroup from 'packages/button-group/main';
 import ToolbarHeader from 'packages/toolbar-header/main';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   return (
-    <div className="padded">
+    <Container>
       <ToolbarHeader title="toolbar">
         <ToolbarActions>
           <ButtonGroup>
@@ -28,6 +29,6 @@ export default () => {
           </ButtonGroup>
         </ToolbarActions>
       </ToolbarHeader>
-    </div>
+    </Container>
   );
 };

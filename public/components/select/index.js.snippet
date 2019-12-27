@@ -1,4 +1,5 @@
 import Select from 'packages/select/main';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   const options = [
@@ -7,8 +8,8 @@ export default () => {
     { value: 'v3', label: 'Option three' }
   ];
   return (
-    <div className="padded">
+    <Container>
       <Select items={options} />
-    </div>
+    </Container>
   );
 };

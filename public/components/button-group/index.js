@@ -8,7 +8,7 @@ export default () => {
   return (
     <Container>
       <ButtonGroup>
-        <Button size="mini">Mini</Button>
+        <Button size="mini" active>Mini</Button>
         <Button size="mini">Normal</Button>
         <Button size="mini">Large</Button>
       </ButtonGroup>

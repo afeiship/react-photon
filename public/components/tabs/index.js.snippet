@@ -3,10 +3,11 @@ import TabItem from 'packages/tab-item/main';
 import Window from 'packages/window/main';
 import WindowContent from 'packages/window-content/main';
 import ToolbarHeader from 'packages/toolbar-header/main';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   return (
-    <div className="padded exmaple-tabs">
+    <Container>
       <Window relative>
         <ToolbarHeader title="Header with tabs" />
         <WindowContent>
@@ -40,6 +41,6 @@ export default () => {
           </Tabs>
         </WindowContent>
       </Window>
-    </div>
+    </Container>
   );
 };

@@ -2,10 +2,11 @@ import Window from 'packages/window/main';
 import WindowContent from 'packages/window-content/main';
 import ToolbarHeader from 'packages/toolbar-header/main';
 import ToolbarFooter from 'packages/toolbar-footer/main';
+import Container from 'root/public/components/layout/container';
 
 export default () => {
   return (
-    <div className="padded exmaple-window">
+    <Container>
       <Window relative>
         <ToolbarHeader title="window header" />
         <WindowContent style={{ flexDirection: 'column' }}>
@@ -21,6 +22,6 @@ export default () => {
         </WindowContent>
         <ToolbarFooter title="window footer" />
       </Window>
-    </div>
+    </Container>
   );
 };
