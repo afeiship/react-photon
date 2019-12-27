@@ -37,3 +37,4 @@ npm i -S @feizheng/react-photon
 ## resources
 - http://photonkit.com/
 - https://www.robinwieruch.de/minimal-react-webpack-babel-setup
+- https://vuikit.js.org/guide/introduction
