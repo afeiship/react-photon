@@ -3,10 +3,21 @@ import WindowContent from 'packages/window-content/main';
 import ToolbarHeader from 'packages/toolbar-header/main';
 import ToolbarFooter from 'packages/toolbar-footer/main';
 import Container from 'root/public/components/layout/container';
+import Property from 'root/public/components/layout/property';
 
 export default () => {
+  const items = [
+    {
+      property: 'className',
+      type: 'String',
+      default: '-',
+      description: 'Extended class name for component.'
+    }
+  ];
+
   return (
     <Container>
+      <Property items={items} />
       <Window relative>
         <ToolbarHeader title="window header" />
         <WindowContent style={{ flexDirection: 'column' }}>

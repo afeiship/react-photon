@@ -5,6 +5,7 @@ import RadioGroup from 'packages/radio-group/main';
 import Textarea from 'packages/textarea/main';
 import Select from 'packages/select/main';
 import Container from 'root/public/components/layout/container';
+import Property from 'root/public/components/layout/property';
 import ReactBlank from '@feizheng/react-blank';
 
 export default () => {
@@ -13,9 +14,18 @@ export default () => {
     { value: 'v2', label: 'Option two' },
     { value: 'v3', label: 'Option three' }
   ];
+  const items = [
+    {
+      property: 'className',
+      type: 'String',
+      default: '-',
+      description: 'Extended class name for component.'
+    }
+  ];
 
   return (
     <Container>
+      <Property items={items} />
       <form>
         <FormGroup>
           <label>Email address:</label>
