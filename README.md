@@ -8,6 +8,9 @@
 # react-photon
 > Photon components built with React.
 
+## thanks to
+[@frostney](https://github.com/frostney) Add me to the developer of `react-photon`.
+
 ## preview
 - https://afeiship.github.io/react-photon/
 
