@@ -56,11 +56,23 @@
       font-weight: 800;
     }
   }
+  .exmaple-github {
+    a {
+      cursor: pointer;
+      color: #007aff;
+      span{
+        margin-left: 4px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
   .react-highlight {
     border-radius: 2px;
     border: 1px dashed #ddd;
-    margin: 10px 10px 20px;
+    margin: 0 10px 20px;
     padding: 5px;
     position: relative;
     &:hover {
