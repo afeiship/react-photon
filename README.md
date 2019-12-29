@@ -29,7 +29,7 @@ npm i -S react-photon
     "presets": ["@babel/preset-env", "@babel/react"],
     "plugins": [
       // ....
-      [ "import", { "libraryName": "@feizheng/react-photon", "libraryDirectory": "dist/lib" } ]
+      [ "import", { "libraryName": "react-photon", "libraryDirectory": "dist/lib" } ]
     ]
   }
   ```
