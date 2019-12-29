@@ -10,7 +10,8 @@ export default class extends React.Component {
   static propsTypes = {
     label: PropTypes.string,
     defaultValue: PropTypes.bool,
-    value: PropTypes.bool
+    value: PropTypes.bool,
+    onChange: PropTypes.func
   };
 
   static defaultProps = {
@@ -24,14 +25,7 @@ export default class extends React.Component {
   };
 
   render() {
-    const {
-      className,
-      label,
-      onChange,
-      defaultValue,
-      value,
-      ...props
-    } = this.props;
+    const { className, label, onChange, defaultValue, value, ...props } = this.props;
 
     return (
       <div className={classNames(CLASS_NAME, 'checkbox', className)}>

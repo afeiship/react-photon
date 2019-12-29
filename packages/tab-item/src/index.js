@@ -9,7 +9,8 @@ export default class extends React.Component {
   static propsTypes = {
     closeable: PropTypes.bool,
     fixed: PropTypes.bool,
-    active: PropTypes.bool
+    active: PropTypes.bool,
+    closeable: PropTypes.bool,
   };
 
   render() {

@@ -12,6 +12,24 @@ export default () => {
       type: 'String',
       default: '-',
       description: 'Extended class name for component.'
+    },
+    {
+      property: 'relative',
+      type: 'Boolean',
+      default: 'false',
+      description: 'If the window is relative.'
+    },
+    {
+      property: 'shadowable',
+      type: 'Boolean',
+      default: 'true',
+      description: 'If window box has shadow.'
+    },
+    {
+      property: 'bordered',
+      type: 'Boolean',
+      default: 'true',
+      description: 'If window box has border.'
     }
   ];
 

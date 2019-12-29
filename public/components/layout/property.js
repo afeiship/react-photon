@@ -1,8 +1,6 @@
 import Table from 'packages/table/main';
 import Window from 'packages/window/main';
 import WindowContent from 'packages/window-content/main';
-import Header from 'root/public/components/layout/header';
-import ReactBlank from '@feizheng/react-blank';
 
 export default ({ items }) => {
   const table = {
@@ -18,7 +16,7 @@ export default ({ items }) => {
     <div className="padded-vertically-more">
       <Window relative shadowable={false}>
         <WindowContent>
-          <Table striped rowKey="property" columns={table.columns} items={items} />
+          <Table striped className="layout-property" rowKey="property" columns={table.columns} items={items} />
         </WindowContent>
       </Window>
     </div>

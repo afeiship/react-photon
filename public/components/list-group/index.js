@@ -10,20 +10,20 @@ export default () => {
     },
     {
       type: 'item',
-      icon: 'http://avatar.chsword.net/avatar/1',
+      icon: 'https://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg',
       title: 'List item title',
       description: 'Lorem ipsum dolor sit amet.'
     },
     {
       type: 'item',
       active: true,
-      icon: 'http://avatar.chsword.net/avatar/2',
+      icon: 'https://ws3.sinaimg.cn/large/0069RVTdgy1ftwxebpvf6j30b40b4gp8.jpg',
       title: 'List item title',
       description: 'Lorem ipsum dolor sit amet.'
     },
     {
       type: 'item',
-      icon: 'http://avatar.chsword.net/avatar/3',
+      icon: 'https://via.placeholder.com/200x100',
       title: 'List item title',
       description: 'Lorem ipsum dolor sit amet.'
     }
@@ -35,6 +35,18 @@ export default () => {
       type: 'String',
       default: '-',
       description: 'Extended class name for component.'
+    },
+    {
+      property: 'items',
+      type: 'Array',
+      default: [],
+      description: 'The list items.'
+    },
+    {
+      property: 'template',
+      type: 'Function',
+      default: 'template({item,index})',
+      description: 'The list item template.'
     }
   ];
 

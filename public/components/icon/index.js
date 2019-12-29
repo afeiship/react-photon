@@ -10,6 +10,12 @@ export default () => {
       type: 'String',
       default: '-',
       description: 'Extended class name for component.'
+    },
+    {
+      property: 'value',
+      type: 'String',
+      default: '-',
+      description: 'The icon name.'
     }
   ];
   return (

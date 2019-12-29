@@ -1,10 +1,45 @@
 import Button from 'packages/button/main';
 import ReactBlank from '@feizheng/react-blank';
 import Container from 'root/public/components/layout/container';
+import Property from 'root/public/components/layout/property';
 
 export default () => {
+  const items = [
+    {
+      property: 'className',
+      type: 'String',
+      default: '-',
+      description: 'Extended class name for component.'
+    },
+    {
+      property: 'active',
+      type: 'Boolean',
+      default: 'false',
+      description: 'If true, set active; if false, set un active.'
+    },
+    {
+      property: 'theme',
+      type: 'String',
+      default: 'default',
+      description: "'default', 'primary', 'positive', 'negative', 'warning'"
+    },
+    {
+      property: 'size',
+      type: 'String',
+      default: 'default',
+      description: "-"
+    },
+    {
+      property: 'dropdown',
+      type: 'Boolean',
+      default: 'false',
+      description: "If has dropdown icon"
+    }
+  ];
+
   return (
     <Container>
+      <Property items={items} />
       <Button>Default</Button>
       <Button theme="primary">Primary</Button>
       <Button theme="positive">Positive</Button>

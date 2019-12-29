@@ -1,13 +1,25 @@
 [
   {
     "type": "title",
-    "label": "Preview"
+    "label": "Guide"
   },
   {
     "type": "nav-link",
     "icon": "search",
-    "label": "all",
-    "to": "/all"
+    "label": "preview",
+    "to": "/preview"
+  },
+  {
+    "type": "nav-link",
+    "icon": "install",
+    "label": "installation",
+    "to": "/installation"
+  },
+  {
+    "type": "nav-link",
+    "icon": "github",
+    "label": "github",
+    "to": "/github"
   },
   {
     "type": "title",

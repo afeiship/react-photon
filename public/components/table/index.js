@@ -44,6 +44,36 @@ export default () => {
       type: 'String',
       default: '-',
       description: 'Extended class name for component.'
+    },
+    {
+      property: 'rowKey',
+      type: 'String',
+      default: 'id',
+      description: 'The row uniq key.'
+    },
+    {
+      property: 'columns',
+      type: 'Array',
+      default: '[]',
+      description: 'The columns list.'
+    },
+    {
+      property: 'items',
+      type: 'Array',
+      default: '[]',
+      description: 'The record list.'
+    },
+    {
+      property: 'templateColumn',
+      type: 'Function',
+      default: 'noop',
+      description: 'The template of column.'
+    },
+    {
+      property: 'template',
+      type: 'Function',
+      default: 'noop',
+      description: 'The template of recored.'
     }
   ];
 

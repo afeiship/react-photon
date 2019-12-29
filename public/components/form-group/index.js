@@ -36,7 +36,7 @@ export default () => {
           <Input name="password" type="password" placeholder="Password" />
         </FormGroup>
         <FormGroup>
-          <label>Description</label>
+          <label>Description:</label>
           <Textarea name="description" placeholder="description" />
         </FormGroup>
         <Select items={options} />

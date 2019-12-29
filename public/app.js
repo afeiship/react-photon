@@ -57,8 +57,8 @@ export default class extends React.Component {
                       );
                     })}
 
-                    <Route path="/all" children={require('./components/all').default} />
-                    <Redirect to="/all" />
+                    <Route path="/preview" children={require('./components/preview').default} />
+                    <Redirect to="/preview" />
                   </Switch>
                 </Pane>
               </Router>

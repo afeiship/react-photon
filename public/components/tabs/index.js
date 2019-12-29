@@ -13,6 +13,18 @@ export default () => {
       type: 'String',
       default: '-',
       description: 'Extended class name for component.'
+    },
+    {
+      property: 'value',
+      type: 'String',
+      default: '-',
+      description: 'The value of tabs.'
+    },
+    {
+      property: 'onChange',
+      type: 'Function',
+      default: 'noop',
+      description: 'When tabs onChange.'
     }
   ];
 

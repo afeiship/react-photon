@@ -10,6 +10,18 @@ export default () => {
       type: 'String',
       default: '-',
       description: 'Extended class name for component.'
+    },
+    {
+      property: 'value',
+      type: 'String',
+      default: '-',
+      description: 'The value of input.'
+    },
+    {
+      property: 'onChange',
+      type: 'Function',
+      default: 'noop',
+      description: 'When value change will trigger.'
     }
   ];
 

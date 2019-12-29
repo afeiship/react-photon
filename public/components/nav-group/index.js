@@ -16,6 +16,18 @@ export default () => {
       type: 'String',
       default: '-',
       description: 'Extended class name for component.'
+    },
+    {
+      property: 'items',
+      type: 'Array',
+      default: '[]',
+      description: 'The list items.'
+    },
+    {
+      property: 'template',
+      type: 'Function',
+      default: 'template({item,index})',
+      description: 'The list item template.'
     }
   ];
 

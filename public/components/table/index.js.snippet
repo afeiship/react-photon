@@ -3,6 +3,7 @@ import Window from 'packages/window/main';
 import WindowContent from 'packages/window-content/main';
 import ReactBlank from '@feizheng/react-blank';
 import Container from 'root/public/components/layout/container';
+import Property from 'root/public/components/layout/property';
 
 export default () => {
   const table = {
@@ -37,8 +38,48 @@ export default () => {
     ]
   };
 
+  const items = [
+    {
+      property: 'className',
+      type: 'String',
+      default: '-',
+      description: 'Extended class name for component.'
+    },
+    {
+      property: 'rowKey',
+      type: 'String',
+      default: 'id',
+      description: 'The row uniq key.'
+    },
+    {
+      property: 'columns',
+      type: 'Array',
+      default: '[]',
+      description: 'The columns list.'
+    },
+    {
+      property: 'items',
+      type: 'Array',
+      default: '[]',
+      description: 'The record list.'
+    },
+    {
+      property: 'templateColumn',
+      type: 'Function',
+      default: 'noop',
+      description: 'The template of column.'
+    },
+    {
+      property: 'template',
+      type: 'Function',
+      default: 'noop',
+      description: 'The template of recored.'
+    }
+  ];
+
   return (
     <Container>
+      <Property items={items} />
       <Window relative>
         <WindowContent>
           <Table columns={table.columns} items={table.items} />

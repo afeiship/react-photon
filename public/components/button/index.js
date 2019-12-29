@@ -14,8 +14,26 @@ export default () => {
     {
       property: 'active',
       type: 'Boolean',
-      default: '-',
+      default: 'false',
       description: 'If true, set active; if false, set un active.'
+    },
+    {
+      property: 'theme',
+      type: 'String',
+      default: 'default',
+      description: "'default', 'primary', 'positive', 'negative', 'warning'"
+    },
+    {
+      property: 'size',
+      type: 'String',
+      default: 'default',
+      description: "-"
+    },
+    {
+      property: 'dropdown',
+      type: 'Boolean',
+      default: 'false',
+      description: "If has dropdown icon"
     }
   ];
 

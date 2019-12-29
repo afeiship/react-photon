@@ -50,6 +50,12 @@
       }
     }
   }
+  .layout-property {
+    th {
+      text-transform: capitalize;
+      font-weight: 800;
+    }
+  }
 
   .react-highlight {
     border-radius: 2px;

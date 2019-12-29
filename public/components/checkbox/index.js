@@ -9,6 +9,24 @@ export default () => {
       type: 'String',
       default: '-',
       description: 'Extended class name for component.'
+    },
+    {
+      property: 'defaultValue',
+      type: 'Boolean',
+      default: 'false',
+      description: 'Default checked for checkbox.'
+    },
+    {
+      property: 'value',
+      type: 'Boolean',
+      default: 'false',
+      description: 'Checked value for checkbox.'
+    },
+    {
+      property: 'onChange',
+      type: 'Fucntion',
+      default: 'nooop',
+      description: 'When checked value changed.'
     }
   ];
 
