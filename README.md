@@ -13,7 +13,7 @@
 
 ## installation
 ```shell
-npm i -S @feizheng/react-photon
+npm i -S react-photon
 ```
 
 ## dynamic import
