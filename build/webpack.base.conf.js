@@ -2,8 +2,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const { resolve } = require('path');
 const webpack = require('webpack');
 
-console.log('root path:', resolve(__dirname, '..', 'src'));
-
 module.exports = (inEnv) => {
   return {
     mode: 'development',
