@@ -28,6 +28,7 @@
     "build:production": "cross-env NODE_ENV=production webpack -p",
     "build:components": "cross-env NODE_ENV=components webpack -p",
     "build": "npm-run-all --serial build:*",
+    "changelog": "auto-changelog -p",
     "start": "node ./build/server.js"
   },
   "devDependencies": {
