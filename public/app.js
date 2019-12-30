@@ -34,7 +34,7 @@ export default class extends React.Component {
     const { hasUpdate } = this.state;
     return (
       <div className="example-component-window">
-        <ReactFullImage src="http://photonkit.com/assets/img/photo-couch.png" />
+        <ReactFullImage src="https://photonkit.com/assets/img/photo-couch.png" />
         <Window className="webkit-sassui-animate-float">
           <ToolbarHeader title="react-photon" />
           <WindowContent>
