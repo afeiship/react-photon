@@ -40,6 +40,20 @@ export default () => {
   return (
     <Container>
       <Property items={items} />
+      <Button size="large">Default</Button>
+      <Button size="large" theme="primary">
+        Primary
+      </Button>
+      <Button size="large" theme="positive">
+        Positive
+      </Button>
+      <Button size="large" theme="negative">
+        Negative
+      </Button>
+      <Button size="large" theme="warning">
+        Warning
+      </Button>
+      <ReactBlank value={20} />
       <Button>Default</Button>
       <Button theme="primary">Primary</Button>
       <Button theme="positive">Positive</Button>

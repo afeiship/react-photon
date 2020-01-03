@@ -18,7 +18,6 @@ export default class extends React.Component {
   };
   static defaultProps = {
     theme: 'default',
-    size: 'large'
   };
   render() {
     const {
