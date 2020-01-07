@@ -25,7 +25,7 @@
     "dev": "cross-env NODE_ENV=local webpack-dev-server",
     "snippet": "node ./build/raw-snippets.js",
     "build:docs": "cross-env NODE_ENV=docs NODE_OPTIONS=--max_old_space_size=4096 webpack -p",
-    "build:production": "cross-env NODE_ENV=production webpack -p",
+    "build:standalone": "cross-env NODE_ENV=standalone webpack -p",
     "build:components": "cross-env NODE_ENV=components webpack -p",
     "build": "npm-run-all --serial build:*",
     "changelog": "auto-changelog -p",
