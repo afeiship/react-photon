@@ -14,7 +14,7 @@ import ReactHighlight from '@feizheng/react-highlight';
 import ReactClipboard from '@feizheng/react-clipboard';
 import ReactFullImage from '@feizheng/react-full-image';
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
-
+import './components/layout/live2d';
 // navs,routes
 const routes = require('root/public/assets/routes.json');
 const navs = require('root/public/assets/navs.json');
