@@ -5,13 +5,13 @@ L2Dwidget.init({
     scale: 1,
     hHeadPos: 0.5,
     vHeadPos: 0.618,
-    jsonPath: 'node_modules/live2d-widget-model-shizuku/assets/shizuku.model.json'
+    jsonPath: 'https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json'
   },
   display: {
     superSample: 2,
     width: 120,
     height: 220,
-    position: 'right',
+    position: 'top',
     hOffset: 20,
     vOffset: 20
   },
