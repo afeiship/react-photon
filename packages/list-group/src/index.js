@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import ReactList from '@feizheng/react-list';
+import ReactList from '@jswork/react-list';
 
 const CLASS_NAME = 'list-group';
 const DEFAULT_TEMPLATE = ({ item, index }) => {

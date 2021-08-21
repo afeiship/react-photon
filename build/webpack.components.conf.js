@@ -2,7 +2,7 @@ const merge = require('webpack-merge');
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const baseConfig = require('./webpack.base.conf');
-const mapEntries = require('@feizheng/webpack-mpa-entries');
+const mapEntries = require('@jswork/webpack-mpa-entries');
 const entry = mapEntries('./packages/**/main.js', ['./packages', 'main.js']);
 
 module.exports = (inEnv) => {
@@ -19,10 +19,10 @@ module.exports = (inEnv) => {
       classnames: 'classnames',
       react: 'react',
       'react-dom': 'react-dom',
-      '@feizheng/noop': '@feizheng/noop',
+      '@jswork/noop': '@jswork/noop',
       'object-assign': 'object-assign',
       'prop-types': 'prop-types',
-      '@feizheng/react-list': '@feizheng/react-list'
+      '@jswork/react-list': '@jswork/react-list'
     },
     plugins: [new CleanWebpackPlugin()]
   });

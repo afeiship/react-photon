@@ -1,7 +1,7 @@
 import Table from 'packages/table/main';
 import Window from 'packages/window/main';
 import WindowContent from 'packages/window-content/main';
-import ReactBlank from '@feizheng/react-blank';
+import ReactBlank from '@jswork/react-blank';
 import Container from 'root/public/components/layout/container';
 import Property from 'root/public/components/layout/property';
 

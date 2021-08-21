@@ -45,7 +45,7 @@ module.exports = (inEnv) => {
       new webpack.ProvidePlugin({
         React: 'react',
         ReactDOM: 'react-dom',
-        ReactHighlight: '@feizheng/react-highlight'
+        ReactHighlight: '@jswork/react-highlight'
       })
     ]
   };

@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import noop from '@feizheng/noop';
+import noop from '@jswork/noop';
 
 const CLASS_NAME = 'form-checkbox';
 

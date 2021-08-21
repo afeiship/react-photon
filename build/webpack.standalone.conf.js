@@ -16,10 +16,10 @@ module.exports = (inEnv) => {
       react: 'react',
       'react-is':'react-is',
       'react-dom': 'react-dom',
-      '@feizheng/noop': '@feizheng/noop',
+      '@jswork/noop': '@jswork/noop',
       'object-assign': 'object-assign',
       'prop-types': 'prop-types',
-      '@feizheng/react-list': '@feizheng/react-list'
+      '@jswork/react-list': '@jswork/react-list'
     },
     plugins: [new CleanWebpackPlugin()]
   });

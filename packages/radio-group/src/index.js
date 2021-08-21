@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from '@feizheng/noop';
+import noop from '@jswork/noop';
 
 const CLASS_NAME = 'form-radio-group';
 

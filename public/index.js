@@ -3,11 +3,11 @@ import React from 'react';
 import App from './app';
 
 // styles:
-import "@feizheng/webkit-sass-reset/dist/base.scss";
-import '@feizheng/photon';
-import '@feizheng/react-sw-update-tips/dist/style.scss';
-import '@feizheng/react-full-image/dist/style.scss';
-import '@feizheng/webkit-sassui-animate-float/dist/index.scss';
+import "@jswork/wsui-reset/dist/base.scss";
+import '@jswork/photon';
+import '@jswork/react-sw-update-tips/dist/style.scss';
+import '@jswork/react-full-image/dist/style.scss';
+import '@jswork/wsui-animate-float/dist/index.scss';
 import 'highlight.js/styles/github.css';
 import './assets/style.scss';
 

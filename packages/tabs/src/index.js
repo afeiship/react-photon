@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import noop from '@feizheng/noop';
+import noop from '@jswork/noop';
 
 const CLASS_NAME = 'tabs';
 

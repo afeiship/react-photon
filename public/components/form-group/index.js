@@ -6,7 +6,7 @@ import Textarea from 'packages/textarea/main';
 import Select from 'packages/select/main';
 import Container from 'root/public/components/layout/container';
 import Property from 'root/public/components/layout/property';
-import ReactBlank from '@feizheng/react-blank';
+import ReactBlank from '@jswork/react-blank';
 
 export default () => {
   const options = [

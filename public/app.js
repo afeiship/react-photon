@@ -8,11 +8,11 @@ import PaneGroup from 'packages/pane-group/main';
 import NavGroup from 'packages/nav-group/main';
 
 // udpate sw + tips
-import NxOfflineSw from '@feizheng/next-offline-sw';
-import ReactSwUpdateTips from '@feizheng/react-sw-update-tips';
-import ReactHighlight from '@feizheng/react-highlight';
-import ReactClipboard from '@feizheng/react-clipboard';
-import ReactFullImage from '@feizheng/react-full-image';
+import NxOfflineSw from '@jswork/next-offline-sw';
+import ReactSwUpdateTips from '@jswork/react-sw-update-tips';
+import ReactHighlight from '@jswork/react-highlight';
+import ReactClipboard from '@jswork/react-clipboard';
+import ReactFullImage from '@jswork/react-full-image';
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import './components/layout/live2d';
 // navs,routes

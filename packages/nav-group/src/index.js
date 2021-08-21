@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import ReactList from '@feizheng/react-list';
+import ReactList from '@jswork/react-list';
 import Icon from '../../icon/main';
 import { NavLink } from 'react-router-dom';
 

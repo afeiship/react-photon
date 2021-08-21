@@ -1,5 +1,5 @@
 import Button from 'packages/button/main';
-import ReactBlank from '@feizheng/react-blank';
+import ReactBlank from '@jswork/react-blank';
 import Container from 'root/public/components/layout/container';
 import Property from 'root/public/components/layout/property';
 
