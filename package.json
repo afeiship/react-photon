@@ -41,7 +41,6 @@
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
     "@feizheng/next-offline-sw": "^1.0.0",
-    "@feizheng/rake-git": "^1.2.1",
     "@feizheng/react-blank": "^1.0.0",
     "@feizheng/react-clipboard": "^1.0.0",
     "@feizheng/react-full-image": "^1.0.0",
